@@ -12,7 +12,16 @@ export class HomeComponent implements OnInit {
         middle: false,
         right: false
     };
-
+    name;
+    phone;
+    email;
+    description;
+    sendInfos(formValues){
+      //data to send via post request
+      console.log(formValues);
+      
+  
+    }
     focus;
     focus1;
     constructor() { }

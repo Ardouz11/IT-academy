@@ -7,7 +7,10 @@
 
 # dependencies
 /node_modules
-
+/package-lock.json
+#files to ignore
+/ISSUE_TEMPLATE.md
+/CHANGELOG.md
 # IDEs and editors
 /.idea
 .project

@@ -14,32 +14,101 @@
         <span class="span-100"></span>
         <span class="span-50"></span>
         <span class="span-100"></span>
+        <span class="span-50"></span>
+        <span class="span-100"></span>
       </div>
-      <div class="container shape-container d-flex align-items-center py-lg">
-        <div class="col px-0">
-          <div class="row align-items-center justify-content-center">
-            <div class="col-lg-6 text-center">
-              <img src="./assets/img/brand/argon-white.png" style="width: 200px;" class="img-fluid">
-              <p class="lead text-white">A beautiful Design System for Bootstrap 4 and Angular 7. It's Free and Open Source.</p>
-              <div class="btn-wrapper mt-5">
-                <a href="https://www.creative-tim.com/product/argon-design-system-angular?ref=adsa-index-header" class="btn btn-lg btn-white btn-icon mb-3 mb-sm-0">
-                  <span class="btn-inner--icon"><i class="ni ni-cloud-download-95"></i></span>
-                  <span class="btn-inner--text">Download Angular</span>
-                </a>
-                <a href="https://github.com/creativetimofficial/argon-design-system-angular?ref=adsa-index-header" class="btn btn-lg btn-github btn-icon mb-3 mb-sm-0" target="_blank">
-                  <span class="btn-inner--icon"><i class="fa fa-github"></i></span>
-                  <span class="btn-inner--text">
-                    <span class="text-warning">Star us</span> on Github</span>
-                </a>
-              </div>
-              <div class="mt-5">
-                <small class="text-white font-weight-bold mb-0 mr-2">*proudly coded by</small>
-                <img src="./assets/img/brand/creativetim-white-slim.png" style="height: 28px;">
+      <!-- Inscription part -->
+      <div class="container py-md">
+        <div class="row row-grid justify-content-between align-items-center">
+          <div class="col-lg-6">
+            <h3 class="display-2 text-white">Bienvenue sur
+            </h3>
+            <h3 class="display-3 text-light ">IT-Solution R.EN Academy
+            </h3>
+            <p class="lead text-white">The Design System comes with four pre-built pages to help you get
+               started faster. You can change the text and images and you're good to go. More importantly,
+                looking at them will give you a picture of what you can built with this powerful Bootstrap 4
+                 Design System.</p>
+          </div>
+          <div class="col-lg-5 mb-lg-auto">
+            <div class="transform-perspective-right">
+              <div class="card bg-secondary shadow border-0">
+                <div class="card-header bg-gradient-primary">
+                  <div class="text-muted text-center">
+                    <h3 class=" text-white">Etre un membre de la communauté</h3>
+                  </div>
+                </div>
+                <div class="card-body px-lg-5 py-lg-5">
+                  <form role="form">
+                    <!-- Name -->
+                    <div class="form-group mb-3" [ngClass]="{'focused':focus===true}">
+                      <div class="input-group input-group-alternative">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="ni ni-circle-08"></i></span>
+                        </div>
+                        <input class="form-control" placeholder="Name" type="name" (focus)="focus=true" (blur)="focus=false">
+                      </div>
+                    </div>
+                    <div class="form-group mb-3" [ngClass]="{'focused':focus===true}">
+                      <div class="input-group input-group-alternative">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                        </div>
+                        <input class="form-control" placeholder="Email" type="email" (focus)="focus=true" (blur)="focus=false">
+                      </div>
+                    </div>
+                    <div class="form-group" [ngClass]="{'focused':focus1===true}">
+                      <div class="input-group input-group-alternative">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="ni ni-mobile-button"></i></span>
+                        </div>
+                        <input class="form-control" placeholder="Phone" type="phone" (focus)="focus1=true" (blur)="focus1=false">
+                      </div>
+                    </div>
+                    <div class="custom-control custom-control-alternative custom-checkbox">
+                      <input class="custom-control-input" id=" customCheckLogin2" type="checkbox">
+                      <label class="custom-control-label" for=" customCheckLogin2">
+                        <span>J'accepte les conditions d'inscription</span>
+                      </label>
+                    </div>
+                    <div class="custom-control custom-control-alternative">
+                      <label>
+                        <u (click)="open(classic2, 'Notification', '')">Conditions</u>
+                       <ng-template #classic2 let-c="close" let-d="dismiss">
+                         <div class="modal-content bg-gradient-primary">
+                           <div class="modal-header">
+                             <h6 class="modal-title" id="modal-title-notification">Conditions</h6>
+                             <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="d('Cross click')">
+                               <span aria-hidden="true">×</span>
+                             </button>
+                           </div>
+                           <div class="modal-body">
+                             <div class="py-3 text-center">
+                               <i class="ni ni-bell-55 ni-3x"></i>
+                               <h4 class="heading mt-4">You should read this!</h4>
+                               <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                             </div>
+                           </div>
+                           <div class="modal-footer">
+                             <button type="button" class="btn btn-white text-primary" data-dismiss="modal" (click)="c('Close click')" >J'accepte</button>
+                             <button type="button" class="btn btn-link text-white ml-auto" data-dismiss="modal" (click)="c('Close click')">Feremr</button>
+                           </div>
+                         </div>
+                       </ng-template>
+                      </label>
+                    </div>
+                  
+                    <div class="text-center">
+                      <button type="button" class="btn btn-primary my-2">S'inscrire</button>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+
       <!-- SVG separator -->
       <div class="separator separator-bottom separator-skew zindex-100">
         <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">

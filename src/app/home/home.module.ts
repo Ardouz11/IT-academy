@@ -8,8 +8,8 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home.component';
 
 import { SectionsModule } from '../sections/sections.module';
-import {MatCardModule} from '@angular/material/card';
-import {MatButtonModule} from '@angular/material/button';
+import { TrainingComponent } from '../training/training.component';
+
 
 @NgModule({
     imports: [
@@ -17,11 +17,9 @@ import {MatButtonModule} from '@angular/material/button';
         BrowserModule,
         FormsModule,
         RouterModule,
-        MatCardModule,
-        MatButtonModule,
         SectionsModule
     ],
-    declarations: [ HomeComponent ],
+    declarations: [ HomeComponent,TrainingComponent ],
     exports:[ HomeComponent ],
     providers: []
 })

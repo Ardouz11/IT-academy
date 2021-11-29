@@ -15,6 +15,9 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { HomeModule } from './home/home.module';
 import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TrainingComponent } from './training/training.component';
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ProfileComponent,
     NavbarComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    TrainingComponent,
+
+    TrainingComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +37,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     RouterModule,
     AppRoutingModule,
+    MatCardModule,
+    MatButtonModule,
     HomeModule,
     BrowserAnimationsModule
   ],

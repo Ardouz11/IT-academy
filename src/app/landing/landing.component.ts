@@ -9,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 export class LandingComponent implements OnInit {
   focus: any;
   focus1: any;
-
+  name;
+  phone;
+  email;
+  description;
   constructor() { }
+  sendInfos(formValues){
+    //data to send via post request
+    console.log(formValues);
+    
 
+  }
   ngOnInit() {}
 
 }

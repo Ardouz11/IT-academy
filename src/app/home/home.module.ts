@@ -8,6 +8,8 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home.component';
 
 import { SectionsModule } from '../sections/sections.module';
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
     imports: [
@@ -15,6 +17,8 @@ import { SectionsModule } from '../sections/sections.module';
         BrowserModule,
         FormsModule,
         RouterModule,
+        MatCardModule,
+        MatButtonModule,
         SectionsModule
     ],
     declarations: [ HomeComponent ],

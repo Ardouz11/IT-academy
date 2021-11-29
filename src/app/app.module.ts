@@ -14,6 +14,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 
 import { HomeModule } from './home/home.module';
 import { LoginComponent } from './login/login.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { LoginComponent } from './login/login.component';
     FormsModule,
     RouterModule,
     AppRoutingModule,
-    HomeModule
+    HomeModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

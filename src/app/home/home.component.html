@@ -117,6 +117,40 @@
       </div>
     </section>
   </div>
+  <section>
+    <div class="container container-lg" >
+      <div *ngFor="let item of [1,2,3,4,5]" class="row">
+        <div class="col-md-3 mb-4 mb-md-0">
+          <div class="card card-lift--hover shadow border-0">
+            <a [routerLink]="['/landing']" title="Landing Page">
+              <img src="./assets/img/theme/landing.jpg" class="card-img">
+            </a>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4 mb-md-1">
+          <div class="card card-lift--hover shadow border-0">
+            <a [routerLink]="['/user-profile']" title="Profile Page">
+              <img src="./assets/img/theme/profile.jpg" class="card-img">
+            </a>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4 mb-md-2">
+          <div class="card card-lift--hover shadow border-0">
+            <a [routerLink]="['/landing']" title="Landing Page">
+              <img src="./assets/img/theme/landing.jpg" class="card-img">
+            </a>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4 mb-md-3">
+          <div class="card card-lift--hover shadow border-0">
+            <a [routerLink]="['/user-profile']" title="Profile Page">
+              <img src="./assets/img/theme/profile.jpg" class="card-img">
+            </a>
+          </div>
+        </div>
+      </div>
+  </div>
+  </section>
   <app-sections></app-sections>
   <section class="section section-lg pt-lg-0 section-contact-us">
     <div class="container">

@@ -1,7 +1,7 @@
 .price{
     color: crimson;
 }
-  
+.classWithPad { margin:10px; padding:10px; }
   .example-header-image{
     background-image: url('https://https://angular.io/assets/images/logos/angularjs/AngularJS-Shield.svg');
     background-size: cover;

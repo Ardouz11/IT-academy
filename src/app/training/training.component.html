@@ -1,7 +1,7 @@
-<section>
-    <div class="container container-lg" >
-      <div class="row card-wrapper">
-          <mat-card *ngFor="let training of trainings" class="example-card col-xs-3 col-sm-3 col-md-3 col-lg-3">
+<section section-lg section-hero section-shaped>
+    <div class="container container-lg " >
+      <div class="row">
+          <mat-card *ngFor="let training of trainings" class="col-xs-3 col-sm-3 col-md-3 col-lg-3 pe-3">
             <img mat-card-image src={{training.src}} alt="Photo of a Shiba Inu">
             <mat-card-content>
               <p>
@@ -14,119 +14,8 @@
               <button mat-button color="primary">Details</button>
               <button mat-raised-button color="accent">Price</button>
             </mat-card-actions>
+            
           </mat-card>
-
-          <!--
-          <div class="card-wrapper col-md-3 mb-3 mb-md-1">
-          <mat-card class="example-card">
-            <mat-card-header>
-              <img
-                src="https://www.freakyjolly.com/wp-content/uploads/2021/07/cropped-cropped-fj-logo-192-removebg-preview-e1625997712615-1.png"
-                mat-card-avatar />
-              <mat-card-title>FreakyJolly.com</mat-card-title>
-              <mat-card-subtitle>
-                Learn Web Development with Easy Tutorials
-              </mat-card-subtitle>
-            </mat-card-header>
-            <img mat-card-image style="width: 80px;" src="https://angular.io/assets/images/logos/angularjs/AngularJS-Shield.svg" alt="Angular Logo">
-            <mat-card-content>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat.
-              </p>
-            </mat-card-content>
-        
-            <mat-card-actions>
-              <button mat-raised-button color="accent">Subscribe</button>
-              <button mat-raised-button color="primary">Show Details</button>
-            </mat-card-actions>
-          </mat-card>
-          </div>
-          <div class="card-wrapper col-md-3 mb-3 mb-md-2">
-          <mat-card class="example-card">
-            <mat-card-header>
-              <img
-                src="https://www.freakyjolly.com/wp-content/uploads/2021/07/cropped-cropped-fj-logo-192-removebg-preview-e1625997712615-1.png"
-                mat-card-avatar />
-              <mat-card-title>FreakyJolly.com</mat-card-title>
-              <mat-card-subtitle>
-                Learn Web Development with Easy Tutorials
-              </mat-card-subtitle>
-            </mat-card-header>
-            <img mat-card-image style="width: 80px;" src="https://angular.io/assets/images/logos/angularjs/AngularJS-Shield.svg" alt="Angular Logo">
-            <mat-card-content>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat.
-              </p>
-            </mat-card-content>
-        
-            <mat-card-actions>
-              <button mat-raised-button color="accent">Subscribe</button>
-              <button mat-raised-button color="primary">Show Details</button>
-            </mat-card-actions>
-          </mat-card>
-        
-        </div>
-        <div class="card-wrapper col-md-3 mb-3 mb-md-3">
-          <mat-card class="example-card">
-            <mat-card-header>
-              <img
-                src="https://www.freakyjolly.com/wp-content/uploads/2021/07/cropped-cropped-fj-logo-192-removebg-preview-e1625997712615-1.png"
-                mat-card-avatar />
-              <mat-card-title>FreakyJolly.com</mat-card-title>
-              <mat-card-subtitle>
-                Learn Web Development with Easy Tutorials
-              </mat-card-subtitle>
-            </mat-card-header>
-            <img mat-card-image style="width: 80px;" src="https://angular.io/assets/images/logos/angularjs/AngularJS-Shield.svg" alt="Angular Logo">
-            <mat-card-content>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat.
-              </p>
-            </mat-card-content>
-        
-            <mat-card-actions>
-              <button mat-raised-button color="accent">Subscribe</button>
-              <button mat-raised-button color="primary">Show Details</button>
-            </mat-card-actions>
-          </mat-card>
-        
-        </div>
-      -->
-        <!--
-        <div class="col-md-3 mb-4 mb-md-0">
-          <div class="card card-lift--hover shadow border-0">
-            <a [routerLink]="['/landing']" title="Landing Page">
-              <img src="./assets/img/theme/landing.jpg" class="card-img">
-            </a>
-          </div>
-        </div>
-        <div class="col-md-3 mb-4 mb-md-1">
-          <div class="card card-lift--hover shadow border-0">
-            <a [routerLink]="['/user-profile']" title="Profile Page">
-              <img src="./assets/img/theme/profile.jpg" class="card-img">
-            </a>
-          </div>
-        </div>
-        <div class="col-md-3 mb-4 mb-md-2">
-          <div class="card card-lift--hover shadow border-0">
-            <a [routerLink]="['/landing']" title="Landing Page">
-              <img src="./assets/img/theme/landing.jpg" class="card-img">
-            </a>
-          </div>
-        </div>
-        <div class="col-md-3 mb-4 mb-md-3">
-          <div class="card card-lift--hover shadow border-0">
-            <a [routerLink]="['/user-profile']" title="Profile Page">
-              <img src="./assets/img/theme/profile.jpg" class="card-img">
-            </a>
-          </div>
-        </div>-->
       </div>
     </div>
   </section>

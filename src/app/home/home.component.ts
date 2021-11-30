@@ -13,7 +13,11 @@ export class HomeComponent implements OnInit {
         middle: false,
         right: false
     };
+    subscribeClient(subscribeForm){
+     //POST To add customer   
+    }
 
+    
     focus;
     focus1;
     closeResult: string;

@@ -1,0 +1,8 @@
+.price{
+    color: crimson;
+}
+  
+  .example-header-image{
+    background-image: url('https://https://angular.io/assets/images/logos/angularjs/AngularJS-Shield.svg');
+    background-size: cover;
+  }

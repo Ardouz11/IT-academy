@@ -5,6 +5,7 @@
         font-weight: $navbar-nav-link-font-weight;
         text-transform: $navbar-nav-link-text-transform;
         letter-spacing: $navbar-nav-link-letter-spacing;
+        background-color: #0271bb17;
         @include transition($navbar-transition);
 
         .nav-link-inner--text {

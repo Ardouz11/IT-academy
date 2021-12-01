@@ -10,8 +10,8 @@
 
 .section-nucleo-icons {
 
-    --icon-size: 5rem;
-    --icon-sm-size: 3.75rem;
+    --icon-size: 6rem;
+    --icon-sm-size: 7rem;
     --gutter: 7rem;
 
     .icons-container {
@@ -40,8 +40,8 @@
             }
 
             &:nth-child(1) {
-                font-size: 42px;
-                color: theme-color("warning");
+                font-size: 60px;
+                color: theme-color("primary");
                 z-index: 2;
             }
         }
@@ -67,7 +67,7 @@
                     left: 50%;
                     top: 50%;
                     font-size: 42px;
-                    color: theme-color("warning");
+                    color: theme-color("primary");
                 }
 
                 &:nth-child(2) {

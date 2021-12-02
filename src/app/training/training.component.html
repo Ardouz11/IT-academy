@@ -1,7 +1,7 @@
 <section section-lg section-hero section-shaped>
     <div class="container container-lg " >
       <div class="row">
-          <mat-card *ngFor="let training of trainings" class="col-xs-3 col-sm-3 col-md-3 col-lg-3 pe-3">
+          <mat-card *ngFor="let training of trainings" class="col-md-3 col-sm-3 col-xs-3 col-lg-3 col-xl-3 mr-5 ml-5 mt-5">
             <img mat-card-image src={{training.src}} alt="Photo of a Shiba Inu">
             <mat-card-content>
               <p>
@@ -14,7 +14,6 @@
               <button mat-button color="primary">Details</button>
               <button mat-raised-button color="accent">Price</button>
             </mat-card-actions>
-            
           </mat-card>
       </div>
     </div>

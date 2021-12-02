@@ -13,6 +13,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 
 import { HomeModule } from './home/home.module';
 import { LoginComponent } from './login/login.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { RestService } from './services/rest.service';
 import { HttpClientModule } from '@angular/common/http';
@@ -24,6 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     ProfileComponent,
     NavbarComponent,
     FooterComponent,
+    LoginComponent,
+
     ContactUsComponent,
     LoginComponent,
   
@@ -36,7 +39,9 @@ import { HttpClientModule } from '@angular/common/http';
     RouterModule,
     HttpClientModule,
     AppRoutingModule,
-    HomeModule
+
+    HomeModule,
+    BrowserAnimationsModule
   ],
   providers: [RestService],
   bootstrap: [AppComponent]

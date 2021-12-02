@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./training.component.css']
 })
 export class TrainingComponent implements OnInit {
-  trainings=[{'name':'first','description':'first training',src:"https://material.angular.io/assets/img/examples/shiba2.jpg"},
+  trainings=[{'name':'first','description':'first training',src:"assets/img/brand/mm.jpeg"},
   {'name':'second','description':'Second training',src:"https://material.angular.io/assets/img/examples/shiba2.jpg"},
   {'name':'third','description':'Third training',src:"https://material.angular.io/assets/img/examples/shiba2.jpg"},
   {'name':'fourth','description':'Fourth training',src:"https://material.angular.io/assets/img/examples/shiba2.jpg"},
@@ -15,7 +15,10 @@ export class TrainingComponent implements OnInit {
   {'name':'third','description':'Third training',src:"https://material.angular.io/assets/img/examples/shiba2.jpg"},
   {'name':'fourth','description':'Fourth training',src:"https://material.angular.io/assets/img/examples/shiba2.jpg"},
   {'name':'fourth','description':'Fourth training',src:"https://material.angular.io/assets/img/examples/shiba2.jpg"}]
-  constructor() { }
+  constructor() {
+
+  
+   }
   getTraining(){
     // GET Request to get all trainings
   }

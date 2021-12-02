@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
-
+import { RestService } from '../services/rest.service';
 @Component({
     selector: 'app-home',
     templateUrl: './home.component.html',
@@ -13,15 +13,21 @@ export class HomeComponent implements OnInit {
         middle: false,
         right: false
     };
+    name;
+    email;
+    phone;
     subscribeClient(subscribeForm){
      //POST To add customer   
+     console.log(subscribeForm);
+     this.restService.createCustomer(subscribeForm);
+     console.log("done")
     }
 
     
     focus;
     focus1;
     closeResult: string;
-    constructor(private modalService: NgbModal) {
+    constructor(private modalService: NgbModal,private restService:RestService ){
 
       }
 

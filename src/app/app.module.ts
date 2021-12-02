@@ -13,7 +13,10 @@ import { FooterComponent } from './shared/footer/footer.component';
 
 import { HomeModule } from './home/home.module';
 import { LoginComponent } from './login/login.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { RestService } from './services/rest.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,8 +25,11 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     ProfileComponent,
     NavbarComponent,
     FooterComponent,
+    LoginComponent,
+
     ContactUsComponent,
     LoginComponent,
+  
     ContactUsComponent
   ],
   imports: [
@@ -31,10 +37,13 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     NgbModule,
     FormsModule,
     RouterModule,
+    HttpClientModule,
     AppRoutingModule,
-    HomeModule
+
+    HomeModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [RestService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

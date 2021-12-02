@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
+import { RestService } from '../services/rest.service';
 @Component({
   selector: 'app-contact-us',
   templateUrl: './contact-us.component.html',
@@ -12,13 +13,16 @@ export class ContactUsComponent implements OnInit {
   description;
   focus;
   focus1;
+  constructor(private restService:RestService) { }
   sendInfos(formValues){
     //data to send via post request
-    console.log(formValues);
+    console.log("before ",formValues);
+    console.log("response ",this.restService.addContactUs(formValues));
+    console.log("after ",formValues);
     
 
   }
-  constructor() { }
+
 
   ngOnInit(): void {
   }

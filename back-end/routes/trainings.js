@@ -1,21 +1,37 @@
+var { response } = require('express');
+var express = require('express');
+var router = express.Router();
 var mysql = require('mysql');
-
 var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database:"mydb"
-});
-
-con.connect(function(err) {
-    if (err) throw err;
-    console.log("Connected!");
-    var sql = "CREATE TABLE customers (name VARCHAR(255), address VARCHAR(255))";
-  con.query(sql, function (err, result) {
-    if (err) throw err;
-    console.log("Table created");
+    host: "localhost",
+    user: "root",
+    password: "",
+    database:"mydb"
   });
+  router.get('/',async function (req, res, next) {
+  
+    try {
+      
+              let sql = `select * from trainings`
+              
+              con.query(sql,(err, result, fields) =>{
+                 
+                  if(err)
+                  {
+        
+                  
+                    res.send({ status: 0, data: "Cannot find data from db" });
+                  }
+                  
+                  res.send({ status: 1, data:result});
+                  
+  }
+              )}
+catch (error) {
+  res.send({ status: 0, data: "connection error"});
 
- 
-   
-  });
+}
+
+  }
+)
+module.exports = router;

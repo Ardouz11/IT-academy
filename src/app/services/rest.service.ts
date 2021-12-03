@@ -38,7 +38,7 @@ export class RestService {
     return this.http.get(`${baseUrlTrainings}?title=${title}`);
   }
   createCustomer(data){
-    return this.http.post(baseUrlCustomer, data).subscribe();
+    return this.http.post(baseUrlCustomer, data);
 
   }
   addContactUs(data){

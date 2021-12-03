@@ -15,7 +15,7 @@ var con = mysql.createConnection({
       let { name, email, phone ,description} = req.body;
       console.log(req.body)
      // const hashed_phone = md5(phone.toString())
-              const sql = `Insert Into contactus (name, email, phone,description) VALUES ( ?, ?, ?,?)`
+              let sql = `Insert Into contactus (name, email, phone,description) VALUES ( ?, ?, ?,?)`
               con.query(sql, [name, email, phone,description],(err, result, fields) =>{
                  
                   if(err)

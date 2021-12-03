@@ -16,10 +16,17 @@ export class HomeComponent implements OnInit {
     name;
     email;
     phone;
+    res;
+    response;
     subscribeClient(subscribeForm){
      //POST To add customer   
      console.log(subscribeForm);
-     this.restService.createCustomer(subscribeForm);
+     this.restService.createCustomer(subscribeForm).subscribe((data:any)=>{
+
+        console.log("Response code status is "+data.status+" and response is "+data.data);
+
+         
+     });
      console.log("done")
     }
 

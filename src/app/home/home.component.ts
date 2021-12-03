@@ -16,13 +16,13 @@ export class HomeComponent implements OnInit {
     name;
     email;
     phone;
-    res;
+    status;
     response;
     subscribeClient(subscribeForm){
      //POST To add customer   
      console.log(subscribeForm);
      this.restService.createCustomer(subscribeForm).subscribe((data:any)=>{
-
+        this.status=data.status
         console.log("Response code status is "+data.status+" and response is "+data.data);
 
          

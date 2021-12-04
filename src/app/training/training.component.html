@@ -1,8 +1,8 @@
 <section section-lg section-hero section-shaped>
-    <div class="container container-lg " >
+    <div class="container-md" >
      <div *ngIf="status==1;else elseBlock" class="row">
         
-          <mat-card *ngFor="let training of trainings" class="text-center col-md-3 col-sm-3 col-xs-3 col-lg-3 col-xl-3 col-lg-pull col-lg-push mr-5 ml-5 mt-5 ">
+          <mat-card *ngFor="let training of trainings" class="text-center col-md-3 mr-5 ml-5 mt-5 ">
             <img mat-card-image [src]="training.src" alt="Photo of a Shiba Inu">
             <mat-card-content >
               <mat-card-title>{{training.title|uppercase}}</mat-card-title>

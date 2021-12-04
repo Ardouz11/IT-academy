@@ -7,12 +7,14 @@ import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { LandingComponent } from './landing/landing.component';
 import { LoginComponent } from './login/login.component';
+import { TrainingComponent } from './training/training.component';
 
 const routes: Routes =[
     { path: 'home',             component: HomeComponent },
     { path: 'user-profile',     component: ProfileComponent },
     { path: 'landing',          component: LandingComponent },
     { path: 'login',          component: LoginComponent },
+    {path: 'training',          component: TrainingComponent },
     { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 
@@ -20,9 +22,7 @@ const routes: Routes =[
   imports: [
     CommonModule,
     BrowserModule,
-    RouterModule.forRoot(routes,{
-      useHash: true
-    })
+    RouterModule.forRoot(routes)
   ],
   exports: [
   ],

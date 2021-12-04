@@ -35,7 +35,7 @@
                   <textarea [(ngModel)]="description" class="form-control form-control-alternative" name="description" rows="3" cols="80" placeholder="Type a message..."></textarea>
                 </div>
                 <div>
-                  <button type="submit" class="btn btn-primary btn-round btn-block btn-lg">Send Message</button>
+                  <button type="submit" [routerLink]="['/home']" class="btn btn-primary btn-round btn-block btn-lg">Send Message</button>
                 </div>
               </form>
             </div>

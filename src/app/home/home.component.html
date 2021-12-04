@@ -117,8 +117,8 @@
                             </div>
                           </div>
                           <div class="modal-footer">
-                            <button type="button" class="btn btn-white text-primary" data-dismiss="modal" (click)="c('Close click')" >OK</button>
-                            <button type="button" class="btn btn-link text-white ml-auto" data-dismiss="modal" (click)="c('Close click')">Fermer</button>
+                            <button type="button" class="btn btn-white text-primary" data-dismiss="modal" [routerLink]="['/home']" (click)="c('Close click')" >OK</button>
+                            <button type="button" class="btn btn-link text-white ml-auto" data-dismiss="modal" [routerLink]="['/home']" (click)="c('Close click')">Fermer</button>
                           </div>
                         </div>
                       </ng-template>

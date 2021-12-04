@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { RestService } from '../services/rest.service';
 @Component({
@@ -24,17 +25,17 @@ export class HomeComponent implements OnInit {
      this.restService.createCustomer(subscribeForm).subscribe((data:any)=>{
         this.status=data.status
         console.log("Response code status is "+data.status+" and response is "+data.data);
+        //this.router.navigate(['training'])
 
          
      });
      console.log("done")
     }
-
     
     focus;
     focus1;
     closeResult: string;
-    constructor(private modalService: NgbModal,private restService:RestService ){
+    constructor(private modalService: NgbModal,private restService:RestService,private router:Router ){
 
       }
 

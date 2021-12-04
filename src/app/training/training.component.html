@@ -1,8 +1,18 @@
 <section section-lg section-hero section-shaped>
-    <div class="container-md" >
-     <div *ngIf="status==1;else elseBlock" class="row">
-        
-          <mat-card *ngFor="let training of trainings" class="text-center col-md-3 mr-5 ml-5 mt-5 ">
+  
+  <div class="container" style="margin-top:30px ;">
+    <div class="row justify-content-center">
+      <div class="col-lg-12 text-left">
+        <h1 class="display-3" style="font-size : 32px; color:#0271bb;word-spacing: 4px;">Formations</h1>
+        <div class="col-lg-12" style="height: 2px;background-color: #0271bb;
+        margin-bottom: 20px;">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-md" >
+    <div *ngIf="status==1;else elseBlock" class="row">
+           <mat-card *ngFor="let training of trainings" class="text-center col-md-3 mr-5 ml-5 mt-5 ">
             <img mat-card-image [src]="training.src" alt="Photo of a Shiba Inu">
             <mat-card-content >
               <mat-card-title>{{training.title|uppercase}}</mat-card-title>
@@ -11,6 +21,7 @@
             <mat-card-actions>
               <button mat-button color="primary">Details</button>
             <label class="price">{{training.price}}</label>
+             <!-- <span style="position: relative;">Price</span>-->
             </mat-card-actions>
             
           </mat-card>

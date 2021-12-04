@@ -11,7 +11,7 @@
 .section-nucleo-icons {
 
     --icon-size: 5rem;
-    --icon-sm-size: 3.75rem;
+    --icon-sm-size: 7rem;
     --gutter: 7rem;
 
     .icons-container {
@@ -30,18 +30,18 @@
             &.icon {
                 width: var(--icon-size);
                 height: var(--icon-size);
-                font-size: 1.7em;
+                font-size: 1em;
             }
 
             &.icon-sm {
                 width: var(--icon-sm-size);
                 height: var(--icon-sm-size);
-                font-size: 1.5em;
+                font-size: 2em;
             }
 
             &:nth-child(1) {
-                font-size: 42px;
-                color: theme-color("warning");
+                font-size: 80px;
+                color: theme-color("primary");
                 z-index: 2;
             }
         }
@@ -67,7 +67,8 @@
                     left: 50%;
                     top: 50%;
                     font-size: 42px;
-                    color: theme-color("warning");
+                    background-color: theme-color("primary");
+                    color: theme-color("primary");
                 }
 
                 &:nth-child(2) {
@@ -88,16 +89,22 @@
                 &:nth-child(5) {
                     left: calc(50% + (var(--gutter) * 4));
                     top: 50%;
+                    background-color: #0271bb83;
+                    color: white;
                 }
 
                 &:nth-child(6) {
                     left: calc(50% + (var(--gutter) * 2.7));
                     top: calc(50% + (var(--gutter) * 1.5));
+                    background-color: #0271bb83;
+                    color: white;
                 }
 
                 &:nth-child(7) {
                     left: calc(50% + (var(--gutter) * 2.7));
                     top: calc(50% - (var(--gutter) * 1.5));
+                    background-color: #0271bb83;
+                    color: white;
                 }
 
                 &:nth-child(8) {
@@ -118,16 +125,22 @@
                 &:nth-child(11) {
                     left: calc(50% - (var(--gutter) * 4));
                     top: 50%;
+                    background-color: #0271bb83;
+                    color: white;
                 }
 
                 &:nth-child(12) {
                     left: calc(50% - (var(--gutter) * 2.7));
                     top: calc(50% + (var(--gutter) * 1.5));
+                    background-color: #0271bb83;
+                    color: white;
                 }
 
                 &:nth-child(13) {
                     left: calc(50% - (var(--gutter) * 2.7));
                     top: calc(50% - (var(--gutter) * 1.5));
+                    background-color: #0271bb83;
+                    color: white;
                 } 
             }
             

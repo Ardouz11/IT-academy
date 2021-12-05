@@ -17,6 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { RestService } from './services/rest.service';
 import { HttpClientModule } from '@angular/common/http';
+import { TrainingDetailsComponent } from './training-details/training-details.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,9 @@ import { HttpClientModule } from '@angular/common/http';
     ContactUsComponent,
     LoginComponent,
   
-    ContactUsComponent
+    ContactUsComponent,
+  
+    TrainingDetailsComponent
   ],
   imports: [
     BrowserModule,

@@ -99,7 +99,7 @@
                     </div>
                   
                     <div class="text-center">
-                      <button type="submit" (click)="open(classic1, 'Notification', '')" class="btn btn-primary my-2">S'inscrire</button>
+                      <button type="submit"  (click)="open(classic1, 'Notification', '')" class="btn btn-primary my-2">S'inscrire</button>
                       <ng-template #classic1 let-c="close" let-d="dismiss">
                         <div class="modal-content bg-gradient-primary">
                           <div class="modal-header">
@@ -117,8 +117,8 @@
                             </div>
                           </div>
                           <div class="modal-footer">
-                            <button type="button" class="btn btn-white text-primary" data-dismiss="modal" [routerLink]="['/home']" (click)="c('Close click')" >OK</button>
-                            <button type="button" class="btn btn-link text-white ml-auto" data-dismiss="modal" [routerLink]="['/home']" (click)="c('Close click')">Fermer</button>
+                            <a type="button" class="btn btn-white text-primary" data-dismiss="modal" href="#" (click)="c('Close click')" >OK</a>
+                            <a type="button" class="btn btn-link text-white ml-auto" data-dismiss="modal" href="#" (click)="c('Close click')">Fermer</a>
                           </div>
                         </div>
                       </ng-template>

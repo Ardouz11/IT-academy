@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
      this.restService.createCustomer(subscribeForm).subscribe((data:any)=>{
         this.status=data.status
         console.log("Response code status is "+data.status+" and response is "+data.data);
-        //this.router.navigate(['training'])
+        //this.router.navigate(['home'])
 
          
      });

@@ -103,7 +103,7 @@
                       <ng-template #classic1 let-c="close" let-d="dismiss">
                         <div class="modal-content bg-gradient-primary">
                           <div class="modal-header">
-                            <h6 class="modal-title" id="modal-title-notification">Status</h6>
+                            <h2 class="modal-title" id="modal-title-notification">Status de votre demande</h2>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="d('Cross click')">
                               <span aria-hidden="true">×</span>
                             </button>
@@ -112,8 +112,8 @@
                             <div class="py-3 text-center">
                               <i class="ni ni-bell-55 ni-3x"></i>
                               
-                              <h4 *ngIf="status==1;else elseBlock" class="heading mt-4">Signed Successfully to db !</h4>
-                              <ng-template #elseBlock><h4 class="heading mt-4">Unsucessful maybe you should try again later !</h4></ng-template> 
+                              <h4 *ngIf="status==1;else elseBlock" class="heading mt-4"> Votre demande a été bien enregistré Merci ! </h4>
+                              <ng-template #elseBlock><h4 class="heading mt-4">Votre demande n'a pas été enregistré Merci de reessayer ultérieurement !</h4></ng-template> 
                             </div>
                           </div>
                           <div class="modal-footer">

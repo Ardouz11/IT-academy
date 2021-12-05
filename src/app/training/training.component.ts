@@ -26,7 +26,10 @@ export class TrainingComponent implements OnInit {
     console.log("the title of this training is ",title)
   }
   ngOnInit(): void {
-   this.getTraining()
+  
+      this.getTraining()
+    
+  
   }
 
 }

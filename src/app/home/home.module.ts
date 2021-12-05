@@ -9,7 +9,7 @@ import { HomeComponent } from './home.component';
 
 import { SectionsModule } from '../sections/sections.module';
 import { TrainingComponent } from '../training/training.component';
-
+import { NgxShimmerLoadingModule } from  'ngx-shimmer-loading';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 @NgModule({
@@ -20,6 +20,7 @@ import {MatButtonModule} from '@angular/material/button';
         RouterModule,
         MatCardModule,
         MatButtonModule,
+        NgxShimmerLoadingModule,
         SectionsModule
     ],
     declarations: [ HomeComponent,TrainingComponent ],

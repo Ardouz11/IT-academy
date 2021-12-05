@@ -26,7 +26,6 @@ import { HttpClientModule } from '@angular/common/http';
     NavbarComponent,
     FooterComponent,
     LoginComponent,
-
     ContactUsComponent,
     LoginComponent,
   
@@ -39,7 +38,6 @@ import { HttpClientModule } from '@angular/common/http';
     RouterModule,
     HttpClientModule,
     AppRoutingModule,
-
     HomeModule,
     BrowserAnimationsModule
   ],

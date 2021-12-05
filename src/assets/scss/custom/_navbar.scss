@@ -5,7 +5,7 @@
         font-weight: $navbar-nav-link-font-weight;
         text-transform: $navbar-nav-link-text-transform;
         letter-spacing: $navbar-nav-link-letter-spacing;
-        background-color: #0271bb17;
+        background-color: #01518646;
         @include transition($navbar-transition);
 
         .nav-link-inner--text {
@@ -223,7 +223,7 @@
     .navbar-nav {
         .nav-link {
             padding: .625rem 0;
-            color: theme-color("default") !important;
+            color: theme-color("white") !important;
         }
 
         .dropdown-menu {
@@ -279,14 +279,14 @@
 
         .navbar-collapse-header {
             display: block;
-            padding-bottom: 1rem;
+            padding-bottom: .5rem;
             margin-bottom: 1rem;
             border-bottom: 1px solid rgba(0, 0, 0, .1);
         }
 
         .collapse-brand {
             img {
-                height: 36px;
+                height: 56px;
             }
         }
 
@@ -299,7 +299,7 @@
     .navbar-collapse.show {
         padding: 1.5rem;
         border-radius: $border-radius;
-        background: #FFF;
+        background: #015186;
         box-shadow: 0 50px 100px rgba(50,50,93,.1),0 15px 35px rgba(50,50,93,.15),0 5px 15px rgba(0,0,0,.1);
         animation: show-navbar-collapse .2s ease forwards;
     }

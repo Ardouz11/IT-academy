@@ -22,6 +22,9 @@ export class TrainingComponent implements OnInit {
       this.status=data.status;
     })
   }
+  navigateToDetails(title){
+    console.log("the title of this training is ",title)
+  }
   ngOnInit(): void {
    this.getTraining()
   }

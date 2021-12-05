@@ -19,7 +19,7 @@
             </mat-card-content>
 
             <mat-card-actions>
-              <button mat-button color="primary">Details</button>
+              <button mat-button color="primary" (click)="navigateToDetails(training.title)">Details</button>
             <label class="price">{{training.price}}</label>
              <!-- <span style="position: relative;">Price</span>-->
             </mat-card-actions>

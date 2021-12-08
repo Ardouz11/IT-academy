@@ -18,6 +18,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { RestService } from './services/rest.service';
 import { HttpClientModule } from '@angular/common/http';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,6 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     ContactUsComponent,
     LoginComponent,
-  
     ContactUsComponent
   ],
   imports: [

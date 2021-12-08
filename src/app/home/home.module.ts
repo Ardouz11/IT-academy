@@ -6,7 +6,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home.component';
-
+import { TrainingDetailsComponent } from '../training-details/training-details.component';
 import { SectionsModule } from '../sections/sections.module';
 import { TrainingComponent } from '../training/training.component';
 import { NgxShimmerLoadingModule } from  'ngx-shimmer-loading';
@@ -23,7 +23,7 @@ import {MatButtonModule} from '@angular/material/button';
         NgxShimmerLoadingModule,
         SectionsModule
     ],
-    declarations: [ HomeComponent,TrainingComponent ],
+    declarations: [ HomeComponent,TrainingComponent,TrainingDetailsComponent],
     exports:[ HomeComponent ],
     providers: []
 })

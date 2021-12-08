@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { RestService } from '../services/rest.service';
 
 @Component({
@@ -11,7 +12,7 @@ export class TrainingComponent implements OnInit {
  */
  trainings=[];
  status;
- constructor(private restService:RestService) {
+ constructor(private restService:RestService,private router:Router) {
 
   
    }
@@ -22,8 +23,9 @@ export class TrainingComponent implements OnInit {
       this.status=data.status;
     })
   }
-  navigateToDetails(title){
-    console.log("the title of this training is ",title)
+  navigateToDetails(id){
+    this.router.navigate(["trainingDetails",id])
+   // console.log("the id of this training is ",id)
   }
   ngOnInit(): void {
   

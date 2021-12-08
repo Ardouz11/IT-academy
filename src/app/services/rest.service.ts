@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
-const baseUrlTrainings = 'http://localhost:8080/trainings';
-const baseUrlCustomer='http://localhost:8080/customer';
-const baseUrlContactUS='http://localhost:8080/contactus';
+const baseUrlTrainings = 'http://localhost:8080/api/trainings';
+const baseUrlCustomer='http://localhost:8080/api/customer';
+const baseUrlContactUS='http://localhost:8080/api/contactus';
 const headers = { 'content-type': 'application/json'} 
 @Injectable()
 export class RestService {
@@ -15,7 +15,7 @@ export class RestService {
   }
 
   get(id) {
-    return this.http.get(`${baseUrlTrainings}/${id}`).pipe(map(res => {return res;}));;
+    return this.http.get(`${baseUrlTrainings}/${id}`);
   }
 
   create(data) {

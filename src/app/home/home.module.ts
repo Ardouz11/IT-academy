@@ -6,24 +6,26 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home.component';
-import { TrainingDetailsComponent } from '../training-details/training-details.component';
+
 import { SectionsModule } from '../sections/sections.module';
 import { TrainingComponent } from '../training/training.component';
-import { NgxShimmerLoadingModule } from  'ngx-shimmer-loading';
-import {MatCardModule} from '@angular/material/card';
-import {MatButtonModule} from '@angular/material/button';
+import { TrainingDetailsComponent } from '../training-details/training-details.component';
+import { CustomerStatusComponent } from '../customer-status/customer-status.component';
+import { ContactUsComponent } from '../contact-us/contact-us.component';
+
 @NgModule({
     imports: [
         CommonModule,
         BrowserModule,
         FormsModule,
         RouterModule,
-        MatCardModule,
-        MatButtonModule,
-        NgxShimmerLoadingModule,
         SectionsModule
     ],
-    declarations: [ HomeComponent,TrainingComponent,TrainingDetailsComponent],
+    declarations: [ HomeComponent ,
+        TrainingComponent,
+        TrainingDetailsComponent,
+        ContactUsComponent
+        ,CustomerStatusComponent],
     exports:[ HomeComponent ],
     providers: []
 })

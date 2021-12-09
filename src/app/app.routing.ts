@@ -9,13 +9,15 @@ import { LandingComponent } from './landing/landing.component';
 import { LoginComponent } from './login/login.component';
 import { TrainingComponent } from './training/training.component';
 import { TrainingDetailsComponent } from './training-details/training-details.component';
+import { CustomerStatusComponent } from './customer-status/customer-status.component';
 
 const routes: Routes =[
     { path: 'home',             component: HomeComponent },
     { path: 'user-profile',     component: ProfileComponent },
     { path: 'landing',          component: LandingComponent },
     { path: 'login',          component: LoginComponent },
-    {path: 'trainingDetails/:id',          component: TrainingDetailsComponent },
+    {path: 'trainingDetails/:id',    component: TrainingDetailsComponent },
+    {path: 'statusInscription/:id', component: CustomerStatusComponent },
     { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 

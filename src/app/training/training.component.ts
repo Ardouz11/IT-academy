@@ -21,7 +21,9 @@ export class TrainingComponent implements OnInit {
     this.restService.getAll().subscribe((data:any)=>{
       this.trainings=data.data
       this.status=data.status;
-    })
+    },error=>{
+      this.status=0
+      console.log("status is after error ",this.status)     })
   }
   navigateToDetails(id){
     this.router.navigate(["trainingDetails",id])

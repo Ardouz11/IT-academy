@@ -7,17 +7,17 @@ import { AppRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
 import { ProfileComponent } from './profile/profile.component';
-import { HomeComponent } from './home/home.component';
+
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 
-import { HomeModule } from './home/home.module';
 import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { RestService } from './services/rest.service';
 import { HttpClientModule } from '@angular/common/http';
-import { TrainingDetailsComponent } from './training-details/training-details.component';
+import { HomeModule } from './home/home.module';
+
 
 
 @NgModule({
@@ -28,9 +28,9 @@ import { TrainingDetailsComponent } from './training-details/training-details.co
     NavbarComponent,
     FooterComponent,
     LoginComponent,
-    ContactUsComponent,
+
     LoginComponent,
-    ContactUsComponent
+  
   ],
   imports: [
     BrowserModule,
@@ -39,8 +39,8 @@ import { TrainingDetailsComponent } from './training-details/training-details.co
     RouterModule,
     HttpClientModule,
     AppRoutingModule,
-    HomeModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HomeModule
   ],
   providers: [RestService],
   bootstrap: [AppComponent]

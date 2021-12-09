@@ -19,25 +19,38 @@ export class HomeComponent implements OnInit {
     phone;
     status;
     response;
+    constructor(private modalService: NgbModal,private restService:RestService,private router:Router ){
+
+    }
+    navigateToStatus(id){
+        if(id==1){
+            this.router.navigate(["statusInscription","successful"])
+        }
+        else{
+            this.router.navigate(["statusInscription","unsuccessful"])
+        }
+        
+    }
     subscribeClient(subscribeForm){
      //POST To add customer   
      console.log(subscribeForm);
      this.restService.createCustomer(subscribeForm).subscribe((data:any)=>{
         this.status=data.status
+        console.log("the resp is ",data)
+       // 
         console.log("Response code status is "+data.status+" and response is "+data.data);
-        //this.router.navigate(['home'])
-
-         
-     });
+        //this.router.navigate(['home'])     
+     },error=>{
+         this.status=0
+         console.log("status is after error ",this.status)     });
+         this.navigateToStatus(this.status)
      console.log("done")
     }
     
     focus;
     focus1;
     closeResult: string;
-    constructor(private modalService: NgbModal,private restService:RestService,private router:Router ){
-
-      }
+  
 
     ngOnInit() {}
 

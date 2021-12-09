@@ -25,7 +25,7 @@
               </h3>
               <h3 class="display-3 text-light" style="font-size: 36px; margin-bottom: 30px;">IT-Solution R.EN Academy
               </h3>
-              <p *ngIf="status==1;else elseBlock" class="lead text-white">Successful.</p>
+              <p *ngIf="status=='successful';else elseBlock" class="lead text-white">Successful.</p>
             </div>
             <ng-template #elseBlock>
                 <p class="lead text-white"> Unsuccesul.</p>

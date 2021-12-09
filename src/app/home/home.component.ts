@@ -37,14 +37,14 @@ export class HomeComponent implements OnInit {
      this.restService.createCustomer(subscribeForm).subscribe((data:any)=>{
         this.status=data.status
         console.log("the resp is ",data)
-       // 
         console.log("Response code status is "+data.status+" and response is "+data.data);
+        this.navigateToStatus(this.status)
         //this.router.navigate(['home'])     
      },error=>{
          this.status=0
          console.log("status is after error ",this.status)     });
          this.navigateToStatus(this.status)
-     console.log("done")
+    
     }
     
     focus;

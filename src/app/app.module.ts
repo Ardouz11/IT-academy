@@ -13,7 +13,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 
 import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ContactUsComponent } from './contact-us/contact-us.component';
+
 import { RestService } from './services/rest.service';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeModule } from './home/home.module';

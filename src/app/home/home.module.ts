@@ -14,6 +14,7 @@ import { TrainingDetailsComponent } from '../training-details/training-details.c
 import { CustomerStatusComponent } from '../customer-status/customer-status.component';
 import { ContactUsComponent } from '../contact-us/contact-us.component';
 import { NgxShimmerLoadingModule } from 'ngx-shimmer-loading';
+import { CustomerUnsuccessComponent } from '../customer-unsuccess/customer-unsuccess.component';
 
 @NgModule({
     imports: [
@@ -29,7 +30,8 @@ import { NgxShimmerLoadingModule } from 'ngx-shimmer-loading';
     declarations: [ HomeComponent ,
         TrainingComponent,
         TrainingDetailsComponent,
-        ContactUsComponent
+        ContactUsComponent,
+        CustomerUnsuccessComponent
         ,CustomerStatusComponent],
     exports:[ HomeComponent ],
     providers: []

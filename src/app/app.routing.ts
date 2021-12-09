@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { TrainingComponent } from './training/training.component';
 import { TrainingDetailsComponent } from './training-details/training-details.component';
 import { CustomerStatusComponent } from './customer-status/customer-status.component';
+import { CustomerUnsuccessComponent } from './customer-unsuccess/customer-unsuccess.component';
 
 const routes: Routes =[
     { path: 'home',             component: HomeComponent },
@@ -17,7 +18,8 @@ const routes: Routes =[
     { path: 'landing',          component: LandingComponent },
     { path: 'login',          component: LoginComponent },
     {path: 'trainingDetails/:id',    component: TrainingDetailsComponent },
-    {path: 'statusInscription/:id', component: CustomerStatusComponent },
+    {path: 'statusInscription/successful', component: CustomerStatusComponent },
+    {path: 'statusInscription/unsuccessful', component: CustomerUnsuccessComponent},
     { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 

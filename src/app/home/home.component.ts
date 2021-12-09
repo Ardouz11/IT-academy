@@ -24,10 +24,10 @@ export class HomeComponent implements OnInit {
     }
     navigateToStatus(id){
         if(id==1){
-            this.router.navigate(["statusInscription","successful"])
+            this.router.navigate(["statusInscription/successful"])
         }
         else{
-            this.router.navigate(["statusInscription","unsuccessful"])
+            this.router.navigate(["statusInscription/unsuccessful"])
         }
         
     }

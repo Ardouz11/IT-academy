@@ -1,9 +1,9 @@
 <main>
-    <div class="position-relative">
+    <div class="position-relative" >
       <!-- Hero for FREE version -->
-      <section class="section section-lg section-hero section-shaped">
+      <section class="section section-lg section-hero section-shaped" >
         <!-- Background circles -->
-        <div class="shape shape-style-1 shape-primary">
+        <div class="shape shape-style-1 shape-primary" >
           <span class="span-150"></span>
           <span class="span-50"></span>
           <span class="span-50"></span>
@@ -20,17 +20,27 @@
         <!-- Inscription part -->
         <div class="container py-md">
           <div class="row row-grid justify-content-between align-items-center">
-            <div class="col-lg-12">
-              <h3 class="display-2 text-white" style="font-size: 36px;">Bienvenue sur
-              </h3>
-              <h3 class="display-3 text-light" style="font-size: 36px; margin-bottom: 30px;">IT-Solution R.EN Academy
-              </h3>
-              <p *ngIf="status==1;else elseBlock" class="lead text-white">Successful.</p>
+            <div class="col-lg-12" style="text-align: center;">
+              <div *ngIf="status==1;else elseBlock" class="lead text-white">
+                <img style="width: 120px; height: 110px;" src="assets/img/custom/felicitation.png"/>
+                <h3 class="display-2 text-white" style="font-size: 36px;">Félicitations vous êtes inscrit
+                </h3>
+                <h3 class="display-3 text-white" style="font-size: 36px; margin-bottom: 30px;">
+                  votre demande a été prise en compte et sera traitée dès que possible
+                </h3>
+              </div>
+          
+              <ng-template #elseBlock>
+                <img style="width: 120px; height: 90px;margin-bottom: 10px;" src="assets/img/custom/probleme.png"/>
+                <h2 class="display-2 text-white" style="font-size: 36px;margin-bottom: 40px;">
+                  Un problème est survenu au niveau du serveur 400
+                </h2>
+                <h1 class="display-1 text-light" style="font-size: 36px; margin-bottom: 30px;">
+                  Réessayer plus tard nous limitons certaines activités pour protéger votre communauté
+                </h1>
+              </ng-template>
+              
             </div>
-            <ng-template #elseBlock>
-                <p class="lead text-white"> Unsuccesul.</p>
-                <img src="assets/img/brand/success.png"/>
-            </ng-template>
             <a button type="submit" class="btn btn-primary my-2" routerLink="/home" >Retour Home</a>
           </div>
         </div>

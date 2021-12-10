@@ -20,15 +20,15 @@ var con = mysql.createConnection({
                   {
         
                     
-                    res.send({ status: 0, data: "Cannot Insert to db" });
+                    return  res.send({ status: 0, data: "Cannot Insert to db" });
                   }
                   
-                  res.send({ status: 1, data: "Succesffuly added to db"});
+                  return  res.send({ status: 1, data: "Succesffuly added to db"});
                   
   }
               )}
 catch (error) {
-  res.send({ status: 0, data: "connection error"});
+  return res.send({ status: 0, data: "connection error"});
 
 }
 

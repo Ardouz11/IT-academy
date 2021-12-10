@@ -14,13 +14,13 @@
   <div class="container-md" >
     <div *ngIf="status==1;else elseBlock" class="row">
            <mat-card *ngFor="let training of trainings" class="text-center col-md-3 mr-5 ml-5 mt-5 ">
-            <img mat-card-image [src]="training.src" alt="Photo of a Shiba Inu">
+            <img mat-card-image [src]="training.pathImage" alt="Photo of a Shiba Inu">
             <mat-card-content >
               <mat-card-title>{{training.title|uppercase}}</mat-card-title>
             </mat-card-content>
 
             <mat-card-actions>
-              <button mat-button color="primary" (click)="navigateToDetails(training.title)">Details</button>
+              <button mat-button color="primary" (click)="navigateToDetails(training.id_training)">Details</button>
             
             <label class="price">{{training.price}}</label>
              <!-- <span style="position: relative;">Price</span>-->

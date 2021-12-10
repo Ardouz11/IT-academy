@@ -20,13 +20,13 @@ var con = mysql.createConnection({
                  
                   if(err)
                   {
-                      res.send({ status: 0, data: err });
+                    return res.send({ status: 0, data: err });
                   }
                   
   }
               )}
 catch (error) {
-  res.send({ status: 0, error: error });
+  return  res.send({ status: 0, error: error });
 }
   }
 )

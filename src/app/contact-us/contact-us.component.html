@@ -16,34 +16,38 @@
               <p class="mt-0">Nous sommes ouverts à toute proposition, service 7jrs/7</p>
               <form #infoForm="ngForm" (ngSubmit)="sendInfos(infoForm.value)">
                 <div class="form-group mt-5" [ngClass]="{'focused':focus===true}">
+                  <div><em *ngIf="infoForm.controls.name?.invalid && (infoForm.controls.name?.touched)">Required</em></div>
                   <div class="input-group input-group-alternative">
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-circle-08"></i></span>
                     </div>
-                    <input [(ngModel)]="name" class="form-control" placeholder="Nom" name="name" type="text" (focus)="focus=true" (blur)="focus=false">
+                    <input [(ngModel)]="name" class="form-control" required minlength="4" placeholder="Nom" name="name" type="text" (focus)="focus=true" (blur)="focus=false">
                   </div>
                 </div>
+                <div><em *ngIf="infoForm.controls.email?.invalid && (infoForm.controls.email?.touched)">Required</em></div>
                 <div class="form-group" [ngClass]="{'focused':focus1===true}">
                   <div class="input-group input-group-alternative">
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                     </div>
-                    <input [(ngModel)]="email" class="form-control" placeholder="Email" name="email" type="email" (focus)="focus1=true" (blur)="focus1=false">
+                    <input [(ngModel)]="email" class="form-control" required ngModel email placeholder="Email" name="email" type="email" (focus)="focus1=true" (blur)="focus1=false">
                   </div>
                 </div>
+                <div><em *ngIf="infoForm.controls.phone?.invalid && (infoForm.controls.phone?.touched)">Required</em></div>
                 <div class="form-group" [ngClass]="{'focused':focus1===true}">
                   <div class="input-group input-group-alternative">
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-mobile-button"></i></span>
                     </div>
-                    <input class="form-control" [(ngModel)]="phone" placeholder="Numéro de téléphone" name="phone" type="text" (focus)="focus1=true" (blur)="focus1=false">
+                    <input class="form-control" [(ngModel)]="phone" required pattern="[0-9]*" minlength="10" maxlength="12" placeholder="Numéro de téléphone" name="phone" type="text" (focus)="focus1=true" (blur)="focus1=false">
                   </div>
                 </div>
+                <div><em *ngIf="infoForm.controls.description?.invalid && (infoForm.controls.description?.touched)">Required</em></div>
                 <div class="form-group mb-4">
-                  <textarea [(ngModel)]="description" class="form-control form-control-alternative" name="description" rows="3" cols="80" placeholder="Taper votre message..."></textarea>
+                  <textarea [(ngModel)]="description" required minlength="10" class="form-control form-control-alternative" name="description" rows="3" cols="80" placeholder="Taper votre message..."></textarea>
                 </div>
                 <div>
-                  <button type="submit" [routerLink]="['/home']" class="btn btn-primary btn-round btn-block btn-lg">Envoyer</button>
+                  <button type="submit" [routerLink]="['/home']" class="btn btn-primary btn-round btn-block btn-lg" [disabled]="!infoForm.valid">Envoyer</button>
                 </div>
               </form>
             </div>

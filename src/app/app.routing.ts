@@ -17,7 +17,7 @@ const routes: Routes =[
     { path: 'user-profile',     component: ProfileComponent },
     { path: 'landing',          component: LandingComponent },
     { path: 'login',          component: LoginComponent },
-    {path: 'trainingDetails/:id',    component: TrainingDetailsComponent },
+    {path: 'trainingDetails',    component: TrainingDetailsComponent },
     {path: 'statusInscription/successful', component: CustomerStatusComponent },
     {path: 'statusInscription/unsuccessful', component: CustomerUnsuccessComponent},
     { path: '', redirectTo: 'home', pathMatch: 'full' }

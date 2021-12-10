@@ -6,13 +6,13 @@ var con = mysql.createConnection({
     host: "localhost",
     user: "root",
     password: "",
-    database:"mydb"
+    database:"itdb"
   });
   router.get('/',async function (req, res, next) {
   
     try {
       
-              let sql = `select * from trainings`
+              let sql = `SELECT 'id_training', 'title', 'description' , 'price' FROM 'training' `
               
               con.query(sql,(err, result, fields) =>{
                  

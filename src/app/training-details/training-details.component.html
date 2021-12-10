@@ -1,4 +1,5 @@
 <main>
+  <div  *ngFor="let training of training_details">
     <div class="position-relative">
       <!-- Hero for FREE version -->
       <section class="section section-lg section-hero section-shaped">
@@ -26,7 +27,7 @@
               <h3 class="display-3 text-light" style="font-size: 36px;">
                 Inscrivez vous dans la formation 
               </h3>
-              <p class="lead text-white"> <b style="font-size: 44px;color: #FFD700;"> SAP MM </b></p>
+              <p class="lead text-white"> <b style="font-size: 44px;color: #FFD700;"> {{training.title} </b></p>
             </div>
             <div class="col-lg-5 mb-lg-auto">
               <div class="transform-perspective-right">
@@ -34,7 +35,7 @@
                   <div class="card-header bg-gradient-primary">
                     <div class="text-muted text-center">
                       <h3 class=" text-white" style="font-size: 22px; margin-bottom: 0px;">
-                        Inscrivez vous dans la formation <b style="font-size: 24px;color: #FFD700;"> SAP MM </b>
+                        Inscrivez vous dans la formation <b style="font-size: 24px;color: #FFD700;"> {{training.title} </b>
                       </h3>
                     </div>
                   </div>
@@ -139,12 +140,13 @@
           <div class="col-lg-6">
             <div class="row">
               <div class="col align-items-center">
-                <h2 style="font-size: 28px; margin-top: 12px;"> 3500 DH </h2> 
+                <h2 style="font-size: 28px; margin-top: 12px;"> {{training.price}} </h2> 
               </div>
               <div class="col" style="text-align :right;">
                 <button type="submit" class="btn btn-primary my-2">S'inscrire</button>
               </div>
             </div>
+           <!--
 <section section-lg section-hero section-shaped >
   <div *ngFor="let training of training_details">
   <p>{{training.id_training}}</p>
@@ -153,13 +155,13 @@
     <p>training-details works!</p>
     <p>test is </p>
 </section>
-
+-->
             <div class="row" style=" margin-top: 20px">
               <div class="col align-items-center" style="text-align: left;">
                 <h3 style="font-size: 18px;"> Date de debut : </h3> 
               </div>
               <div class="col" style="text-align :right;">
-                <h2 style="font-size: 18px;"> 21 - 05 - 2021 </h2> 
+                <h2 style="font-size: 18px;"> {{training.dateDebut}} </h2> 
               </div>
             </div>
 
@@ -168,22 +170,22 @@
                 <h3 style="font-size: 18px;"> Date de Fin : </h3> 
               </div>
               <div class="col" style="text-align :right;">
-                <h2 style="font-size: 18px;">  11 - 08 - 2021 </h2> 
+                <h2 style="font-size: 18px;">  {{training.dateFin}} </h2> 
               </div>
             </div>
 
             <div class="row">
               <div class="col align-items-right" style="text-align: left;">
-                <h3 style="font-size: 18px;"> Temps : <b>de 14h00 à 18h00</b></h3> 
+                <h3 style="font-size: 18px;"> Temps : <b> {{training.horaire}} </b></h3> 
               </div>
             </div>
 
             <div class="row">
               <div class="col align-items-right" style="text-align: left;">
-                <h3 style="font-size: 18px;"> Mode : <b>à distance</b> </h3> 
+                <h3 style="font-size: 18px;"> Mode : <b> {{training.mode}}</b> </h3> 
               </div>
               <div class="col" style="text-align :right;">
-                <h2 style="font-size: 18px;"> Place :  <b> Zoom</b></h2> 
+                <h2 style="font-size: 18px;"> Place :  <b> {{training.place}} </b></h2> 
               </div>
             </div>
 
@@ -250,3 +252,4 @@
         </div>
       </div>
     </section>
+  </div>

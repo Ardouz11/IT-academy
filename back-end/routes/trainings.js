@@ -12,7 +12,7 @@ var con = mysql.createConnection({
   
     try {
       
-              let sql = `SELECT 'id_training', 'title', 'description' , 'price' FROM 'training' `
+              let sql = `SELECT id_training, title, description, price, pathImage FROM training;`
               
               con.query(sql,(err, result, fields) =>{
                  

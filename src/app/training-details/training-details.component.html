@@ -27,7 +27,7 @@
               <h3 class="display-3 text-light" style="font-size: 36px;">
                 Inscrivez vous dans la formation 
               </h3>
-              <p class="lead text-white"> <b style="font-size: 44px;color: #FFD700;"> {{training.title} </b></p>
+              <p class="lead text-white"> <b style="font-size: 44px;color: #FFD700;"> {{training.title}} </b></p>
             </div>
             <div class="col-lg-5 mb-lg-auto">
               <div class="transform-perspective-right">
@@ -35,7 +35,7 @@
                   <div class="card-header bg-gradient-primary">
                     <div class="text-muted text-center">
                       <h3 class=" text-white" style="font-size: 22px; margin-bottom: 0px;">
-                        Inscrivez vous dans la formation <b style="font-size: 24px;color: #FFD700;"> {{training.title} </b>
+                        Inscrivez vous dans la formation <b style="font-size: 24px;color: #FFD700;"> {{training.title}} </b>
                       </h3>
                     </div>
                   </div>
@@ -161,7 +161,7 @@
                 <h3 style="font-size: 18px;"> Date de debut : </h3> 
               </div>
               <div class="col" style="text-align :right;">
-                <h2 style="font-size: 18px;"> {{training.dateDebut}} </h2> 
+                <h2 style="font-size: 18px;"> {{training.date_start | date:'dd-MM-yyyy'}} </h2> 
               </div>
             </div>
 
@@ -170,19 +170,19 @@
                 <h3 style="font-size: 18px;"> Date de Fin : </h3> 
               </div>
               <div class="col" style="text-align :right;">
-                <h2 style="font-size: 18px;">  {{training.dateFin}} </h2> 
+                <h2 style="font-size: 18px;">  {{training.date_end | date:'dd-MM-yyyy'}} </h2> 
               </div>
             </div>
 
             <div class="row">
               <div class="col align-items-right" style="text-align: left;">
-                <h3 style="font-size: 18px;"> Temps : <b> {{training.horaire}} </b></h3> 
+                <h3 style="font-size: 18px;"> Temps : <b> {{training.descriptionTime}} </b></h3> 
               </div>
             </div>
 
             <div class="row">
               <div class="col align-items-right" style="text-align: left;">
-                <h3 style="font-size: 18px;"> Mode : <b> {{training.mode}}</b> </h3> 
+                <h3 style="font-size: 18px;"> Mode : <b> {{training.training_mode}}</b> </h3> 
               </div>
               <div class="col" style="text-align :right;">
                 <h2 style="font-size: 18px;"> Place :  <b> {{training.place}} </b></h2> 
@@ -221,7 +221,7 @@
                 <div class="card bg-secondary shadow border-0 bg-gradient-primary">
 
                   <div class="card-body">
-                    <img style="width: 110%;" src="./assets/img/custom/certif_mm.png">
+                    <img style="width: 110%;" src={{training.pathCertificate}}>
                   </div>
 
                 </div>

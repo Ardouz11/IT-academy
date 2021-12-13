@@ -3,3 +3,13 @@
     font-weight: bold;
     font-size: larger;
 }
+@media (max-width: 978px) {
+    .container {
+      padding:0;
+      margin:0;
+    }
+    .col {
+        padding:0;
+        margin:0;
+      }
+}

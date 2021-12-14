@@ -42,7 +42,7 @@ import { HomeModule } from './home/home.module';
     AppRoutingModule,
 
     BrowserAnimationsModule,
-
+    
     HomeModule
   ],
   providers: [RestService],

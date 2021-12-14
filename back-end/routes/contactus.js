@@ -5,11 +5,9 @@ var mysql = require('mysql');
 var nodemailer = require('nodemailer');
 
 var transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: 'rachidneymar1998@gmail.com',
-    pass: 'rachidneymar832906041998'
-  }
+  host: "localhost", //Host
+    port: 587, // Port 
+    secure: true
 });
 
 var con = mysql.createConnection({

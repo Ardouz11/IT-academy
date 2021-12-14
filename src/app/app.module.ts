@@ -17,7 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RestService } from './services/rest.service';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeModule } from './home/home.module';
-import { CustomerUnsuccessComponent } from './customer-unsuccess/customer-unsuccess.component';
+
 
 
 
@@ -40,7 +40,9 @@ import { CustomerUnsuccessComponent } from './customer-unsuccess/customer-unsucc
     RouterModule,
     HttpClientModule,
     AppRoutingModule,
+
     BrowserAnimationsModule,
+
     HomeModule
   ],
   providers: [RestService],

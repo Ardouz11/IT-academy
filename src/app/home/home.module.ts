@@ -15,6 +15,8 @@ import { CustomerStatusComponent } from '../customer-status/customer-status.comp
 import { ContactUsComponent } from '../contact-us/contact-us.component';
 import { NgxShimmerLoadingModule } from 'ngx-shimmer-loading';
 import { CustomerUnsuccessComponent } from '../customer-unsuccess/customer-unsuccess.component';
+import { CountdownComponent } from '../countdown/countdown.component';
+
 
 @NgModule({
     imports: [
@@ -25,6 +27,7 @@ import { CustomerUnsuccessComponent } from '../customer-unsuccess/customer-unsuc
         NgxShimmerLoadingModule,
         MatCardModule,
         MatButtonModule,
+        
         SectionsModule
     ],
     declarations: [ HomeComponent ,
@@ -32,7 +35,8 @@ import { CustomerUnsuccessComponent } from '../customer-unsuccess/customer-unsuc
         TrainingDetailsComponent,
         ContactUsComponent,
         CustomerUnsuccessComponent
-        ,CustomerStatusComponent],
+        ,CustomerStatusComponent,
+    CountdownComponent],
     exports:[ HomeComponent ],
     providers: []
 })

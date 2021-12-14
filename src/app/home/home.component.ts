@@ -42,8 +42,9 @@ export class HomeComponent implements OnInit {
         //this.router.navigate(['home'])     
      },error=>{
          this.status=0
-         console.log("status is after error ",this.status)     });
-         this.navigateToStatus(this.status)
+         console.log("status is after error ",this.status)  
+         this.navigateToStatus(this.status)});
+         
     
     }
     

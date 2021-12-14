@@ -2,6 +2,15 @@ var express = require('express');
 var router = express.Router();
 var mysql = require('mysql');
 //var md5 = require('md5');
+var nodemailer = require('nodemailer');
+
+var transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: 'rachidneymar1998@gmail.com',
+    pass: 'rachidneymar832906041998'
+  }
+});
 
 var con = mysql.createConnection({
     host: "localhost",
@@ -11,20 +20,22 @@ var con = mysql.createConnection({
   });
   router.post('/',async function (req, res, next) {
     try {
-
-      let { name, email, phone ,description} = req.body;
-      console.log(req.body)
-     // const hashed_phone = md5(phone.toString())
-              let sql = `Insert Into contactus (name, email, phone,description) VALUES ( ?, ?, ?,?)`
-              con.query(sql, [name, email, phone,description],(err, result, fields) =>{
-                 
-                  if(err)
-                  {
-                    return res.send({ status: 0, data: err });
-                  }
-                  
-  }
-              )}
+      let mailOptions = {
+        from: req.body.email,
+        to: 'rachidardouz11@gmail.com',
+        subject: 'Sending Email using Node.js',
+        text: req.body.description
+      };
+      transporter.sendMail(mailOptions, function(error, info){
+        if (error) {
+          console.log("Error",error);
+          return res.send({ status: 0, data: error });
+        } else {
+          console.log('Email sent: ' + info.response);
+          return res.send({ status: 1, data: "Email sent successfully" });
+        }
+      }); 
+    }  
 catch (error) {
   return  res.send({ status: 0, error: error });
 }

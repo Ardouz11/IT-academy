@@ -17,6 +17,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RestService } from './services/rest.service';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeModule } from './home/home.module';
+import { ContactSuccessComponent } from './contact-success/contact-success.component';
+import { ContactUnsuccessComponent } from './contact-unsuccess/contact-unsuccess.component';
 
 
 
@@ -31,6 +33,10 @@ import { HomeModule } from './home/home.module';
     LoginComponent,
 
     LoginComponent,
+
+    ContactSuccessComponent,
+
+    ContactUnsuccessComponent,
   
   ],
   imports: [

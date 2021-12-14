@@ -42,6 +42,6 @@ export class RestService {
 
   }
   addContactUs(data){
-    return this.http.post(baseUrlContactUS, data).subscribe();
+    return this.http.post(baseUrlContactUS, data);
   }
 }

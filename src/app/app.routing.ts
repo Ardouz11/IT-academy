@@ -11,6 +11,8 @@ import { TrainingComponent } from './training/training.component';
 import { TrainingDetailsComponent } from './training-details/training-details.component';
 import { CustomerStatusComponent } from './customer-status/customer-status.component';
 import { CustomerUnsuccessComponent } from './customer-unsuccess/customer-unsuccess.component';
+import { ContactSuccessComponent } from './contact-success/contact-success.component';
+import { ContactUnsuccessComponent } from './contact-unsuccess/contact-unsuccess.component';
 
 const routes: Routes =[
     { path: 'home',             component: HomeComponent },
@@ -20,6 +22,8 @@ const routes: Routes =[
     {path: 'trainingDetails/:id',    component: TrainingDetailsComponent },
     {path: 'statusInscription/successful', component: CustomerStatusComponent },
     {path: 'statusInscription/unsuccessful', component: CustomerUnsuccessComponent},
+    {path: 'statusContact/successful', component: ContactSuccessComponent},
+    {path: 'statusContact/unsuccessful', component: ContactUnsuccessComponent},
     { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 

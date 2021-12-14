@@ -47,7 +47,7 @@
                   <textarea [(ngModel)]="description" required minlength="10" class="form-control form-control-alternative" name="description" rows="3" cols="80" placeholder="Taper votre message..."></textarea>
                 </div>
                 <div>
-                  <button type="submit" [routerLink]="['/home']" class="btn btn-primary btn-round btn-block btn-lg" [disabled]="!infoForm.valid">Envoyer</button>
+                  <button type="submit" class="btn btn-primary btn-round btn-block btn-lg" [disabled]="!infoForm.valid">Envoyer</button>
                 </div>
               </form>
             </div>

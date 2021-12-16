@@ -1,29 +1,24 @@
 var express = require('express');
 var router = express.Router();
-var mysql = require('mysql');
-//var md5 = require('md5');
 var nodemailer = require('nodemailer');
 
 var transporter = nodemailer.createTransport({
-  service: 'outlook',
+  service: 'gmail',
+  host: 'smtp.gmail.com',
+  secure: 'true',
+  port: '465',
   auth: {
     user: 'rachid.ardouz@itsren-academy.com',
     pass: 'nHl1v6vvvoXo'
   }
 })
-
-var con = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database:"mydb"
-  });
   router.post('/',async function (req, res, next) {
     try {
+      console.log("email is ",req.body.email)
       let mailOptions = {
         from: req.body.email,
         to: 'contact@itsren-academy.com',
-        subject: 'Sending Email using Node.js',
+        subject: 'Message from '+req.body.email,
         text: req.body.description
       };
       transporter.sendMail(mailOptions, function(error, info){

@@ -5,10 +5,12 @@ var mysql = require('mysql');
 var nodemailer = require('nodemailer');
 
 var transporter = nodemailer.createTransport({
-  host: "localhost", //Host
-    port: 587, // Port 
-    secure: true
-});
+  service: 'outlook',
+  auth: {
+    user: 'rachid.ardouz@itsren-academy.com',
+    pass: 'nHl1v6vvvoXo'
+  }
+})
 
 var con = mysql.createConnection({
     host: "localhost",
@@ -20,7 +22,7 @@ var con = mysql.createConnection({
     try {
       let mailOptions = {
         from: req.body.email,
-        to: 'rachidardouz11@gmail.com',
+        to: 'contact@itsren-academy.com',
         subject: 'Sending Email using Node.js',
         text: req.body.description
       };

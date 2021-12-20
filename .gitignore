@@ -8,6 +8,7 @@
 # dependencies
 /node_modules
 /package-lock.json
+back-end/node_modules
 #files to ignore
 /ISSUE_TEMPLATE.md
 /CHANGELOG.md

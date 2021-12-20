@@ -18,6 +18,7 @@ import { CustomerUnsuccessComponent } from '../customer-unsuccess/customer-unsuc
 import { CountdownComponent } from '../countdown/countdown.component';
 
 
+
 @NgModule({
     imports: [
         CommonModule,
@@ -27,7 +28,7 @@ import { CountdownComponent } from '../countdown/countdown.component';
         NgxShimmerLoadingModule,
         MatCardModule,
         MatButtonModule,
-        
+     
         SectionsModule
     ],
     declarations: [ HomeComponent ,

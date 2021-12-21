@@ -11,6 +11,8 @@ export class TrainingDetailsComponent implements OnInit {
   training_id;
   status;
   training_details;
+  training_title1;
+  training_title2;
 
   constructor(private restService:RestService,private activatedRoute:ActivatedRoute) { 
     this.training_id=this.activatedRoute.snapshot.params['id']
@@ -20,9 +22,10 @@ export class TrainingDetailsComponent implements OnInit {
     // GET Request to get details of a training
     
     this.restService.get(this.training_id).subscribe((data:any)=>{
-      this.training_details=data.data
+      this.training_details=data.resultTraining
+      this.training_title1=data.resultsTitle1
       this.status=data.status;
-      console.log("the resp is ",this.training_details," and the status is ",this.status)
+      console.log("the resp is ",this.training_details,"and title1 is ",this.training_title1, " and the status is ",this.status)
     },error=>{
       this.status=0
       console.log("status is after error ",this.status)

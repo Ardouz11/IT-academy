@@ -19,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeModule } from './home/home.module';
 import { ContactSuccessComponent } from './contact-success/contact-success.component';
 import { ContactUnsuccessComponent } from './contact-unsuccess/contact-unsuccess.component';
+import { YoutubeComponent } from './youtube/youtube.component';
 
 
 
@@ -37,6 +38,8 @@ import { ContactUnsuccessComponent } from './contact-unsuccess/contact-unsuccess
     ContactSuccessComponent,
 
     ContactUnsuccessComponent,
+
+    YoutubeComponent,
       
   ],
   imports: [

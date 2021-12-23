@@ -11,9 +11,9 @@
       </div>
     </div>
   </div>
-  <div class="container-md " >
+  <div class="container-md container-xs container-sm container-xl container-xxl " >
     <div *ngIf="status==1;else elseBlock" class="row">
-           <mat-card *ngFor="let training of trainings" class="text-center col-md-3 col-lg-3 mr-4 ml-4 ml-md-5 mr-md-3 mt-5 col-xs-6 ">
+           <mat-card *ngFor="let training of trainings" class="text-center col-md-3 col-lg-3  mr-4 ml-4 ml-md-5 mr-md-3 mt-5 col-xs-6 ">
             <img mat-card-image [src]="training.pathImage" alt="Photo of a Shiba Inu">
             <mat-card-content >
               <mat-card-title>{{training.title|uppercase}}</mat-card-title>

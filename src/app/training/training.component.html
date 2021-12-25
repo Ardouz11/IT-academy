@@ -15,7 +15,7 @@
       <div class="col-lg-12 text-left">
         <div class="container-md container-xs container-xl container-xl container-xxl " >
           <div *ngIf="status==1;else elseBlock" class="row justify-content-center">
-                <mat-card *ngFor="let training of trainings" class="text-center col-md-4 col-lg-3  mr-4 ml-4 ml-md-4 mr-md-3 mt-3 col-xs-3 ">
+                <mat-card *ngFor="let training of trainings" class="text-center col-md-4 col-lg-3  mr-4 ml-2 ml-md-2 mr-md-4 mt-4 col-xs-4 ">
                   <img mat-card-image [src]="training.pathImage" alt="Photo of a Shiba Inu">
                   <mat-card-content style="margin-bottom: 0px;">
                     <mat-card-title>{{training.title|uppercase}}</mat-card-title>

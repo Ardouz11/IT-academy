@@ -5,6 +5,7 @@ const baseUrlTrainings = 'http://localhost:8080/api/trainings';
 const baseUrlCustomer='http://localhost:8080/api/customer';
 const baseUrlPerson='http://localhost:8080/api/person';
 const baseUrlContactUS='http://localhost:8080/api/contactus';
+const baseUrlListOfCustomers='http://localhost:8080/api/listOfCustomers';
 const headers = { 'content-type': 'application/json'} 
 @Injectable()
 export class RestService {
@@ -18,7 +19,9 @@ export class RestService {
   get(id) {
     return this.http.get(`${baseUrlTrainings}/${id}`);
   }
-
+  getListOfCustomers(id) {
+    return this.http.get(`${baseUrlListOfCustomers}/${id}`);
+  }
   create(data) {
     return this.http.post(baseUrlTrainings, data).pipe(map(res => {return res;}));
   }

@@ -10,11 +10,11 @@ var con = mysql.createConnection({
   });
   router.post('/',async function (req, res, next) {
     try {
-      let { name, email, phone } = req.body;
+      let { name, email, phone,id_training } = req.body;
       
-              let sql = `Insert Into person (full_name, email, phone,id_training) VALUES ( ?, ?, ?,"home")`
+              let sql = `Insert Into person (full_name, email, phone,id_training) VALUES ( ?, ?, ?,?)`
               
-              con.query(sql, [name, email, phone],(err, result, fields) =>{
+              con.query(sql, [name, email, phone,id_training],(err, result, fields) =>{
                  
                   if(err)
                   {

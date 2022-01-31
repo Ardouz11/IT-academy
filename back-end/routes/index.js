@@ -4,6 +4,8 @@ var trainings = require('./trainings');
 router.use('/api/trainings', trainings);
 var customer = require('./customer');
 router.use('/api/customer', customer);
+var person = require('./person');
+router.use('/api/person', person);
 var contactus = require('./contactus');
 router.use('/api/contactus', contactus);
 module.exports = router;

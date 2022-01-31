@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { RestService } from '../services/rest.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-training-details',
@@ -14,10 +15,19 @@ export class TrainingDetailsComponent implements OnInit {
   training_title1;
   training_title2;
 
-  constructor(private restService:RestService,private activatedRoute:ActivatedRoute) { 
+  constructor(private restService:RestService,private activatedRoute:ActivatedRoute,private router:Router ) { 
     this.training_id=this.activatedRoute.snapshot.params['id']
     console.log("the id passed is : ",this.activatedRoute.snapshot.params['id'])
   }
+  navigateToStatus(id){
+    if(id==1){
+        this.router.navigate(["statusInscription/successful"])
+    }
+    else{
+        this.router.navigate(["statusInscription/unsuccessful"])
+    }
+    
+}
   getTrainingDetails(){
     // GET Request to get details of a training
     
@@ -35,16 +45,16 @@ export class TrainingDetailsComponent implements OnInit {
     //POST To add customer   
     subscribeForm["id_training"]=this.training_id
     console.log(subscribeForm);
-    this.restService.createCustomer(subscribeForm).subscribe((data:any)=>{
+    this.restService.addPerson(subscribeForm).subscribe((data:any)=>{
        this.status=data.status
        console.log("the resp is ",data)
        console.log("Response code status is "+data.status+" and response is "+data.data);
-      // this.navigateToStatus(this.status)
+       this.navigateToStatus(this.status)
        //this.router.navigate(['home'])     
     },error=>{
         this.status=0
         console.log("status is after error ",this.status)  
-       // this.navigateToStatus(this.status)
+       this.navigateToStatus(this.status)
       }
        );
         

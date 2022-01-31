@@ -8,6 +8,6 @@ var person = require('./person');
 router.use('/api/person', person);
 var contactus = require('./contactus');
 router.use('/api/contactus', contactus);
-var listCustomers = require('./listCustomers');
-router.use('/api/listCustomers', listCustomers);
+var listOfCustomers = require('./listOfCustomers');
+router.use('/api/listOfCustomers', listOfCustomers);
 module.exports = router;

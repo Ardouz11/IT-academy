@@ -4,9 +4,9 @@ var router = express.Router();
 var mysql = require('mysql');
 var con = mysql.createConnection({
     host: "localhost",
-    user: "root",
-    password: "",
-    database:"itdb"
+    user: "cvbt2687_root",
+    password: "rachuser@1998",
+    database:"cvbt2687_itdb"
   });
   router.post('/',async function (req, res, next) {
     try {

@@ -4,11 +4,11 @@ var router = express.Router();
 var mysql = require('mysql');
 var result
 var con = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database:"itdb"
-  });
+  host: "localhost",
+  user: "cvbt2687_root",
+  password: "rachuser@1998",
+  database:"cvbt2687_itdb"
+});
   router.get('/',async function (req, res, next) {
   
     try {

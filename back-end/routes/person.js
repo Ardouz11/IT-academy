@@ -3,11 +3,11 @@ var express = require('express');
 var router = express.Router();
 var mysql = require('mysql');
 var con = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database:"itdb"
-  });
+  host: "localhost",
+  user: "cvbt2687_root",
+  password: "rachuser@1998",
+  database:"cvbt2687_itdb"
+});
   router.post('/',async function (req, res, next) {
     try {
       let { name, email, phone,id_training } = req.body;

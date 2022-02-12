@@ -10,8 +10,10 @@ var con = mysql.createConnection({
     database:"itdb"
   });
   router.get('/',async function (req, res, next) {
+   
   
     try {
+      if(req.headers.authorization=='rachuser@1998'){
       res.setHeader('Content-Type', 'text/plain');
               let sql = `SELECT id_training, title, description, price, pathImage FROM training;`
               
@@ -27,7 +29,7 @@ var con = mysql.createConnection({
                   return res.send({ status: 1, data:result});
                   
   }
-              )}
+              )}  }
 catch (error) {
   return res.send({ status: 0, data: "connection error"});
 
@@ -36,7 +38,8 @@ catch (error) {
   }
 )
 router.get('/:id',async function (req, res, next) {
-  try {     
+  try {  
+    if(req.headers.authorization=='rachuser@1998'){
             let resultsTraining,resultsTitle1
             let resultsTitle2=[]
             let sql = `SELECT * FROM training where id_training=?;`
@@ -76,7 +79,7 @@ router.get('/:id',async function (req, res, next) {
 })
 })
 
-}
+}}
 catch (error) {
   console.log("error")
 return res.send({ status: 0, data: "connection error"});

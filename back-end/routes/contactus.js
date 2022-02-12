@@ -14,6 +14,7 @@ var transporter = nodemailer.createTransport({
 })
   router.post('/',async function (req, res, next) {
     try {
+      if(req.headers.authorization=='rachuser@1998'){
       console.log("email is ",req.body.email)
       let mailOptions = {
         from: req.body.email,
@@ -30,7 +31,8 @@ var transporter = nodemailer.createTransport({
           return res.send({ status: 1, data: "Email sent successfully" });
         }
       }); 
-    }  
+    }
+  }  
 catch (error) {
   return  res.send({ status: 0, error: error });
 }

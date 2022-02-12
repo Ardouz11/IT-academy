@@ -15,7 +15,7 @@ import { ContactSuccessComponent } from './contact-success/contact-success.compo
 import { ContactUnsuccessComponent } from './contact-unsuccess/contact-unsuccess.component';
 
 const routes: Routes =[
-    { path: 'home',             component: HomeComponent },
+    { path: '',             component: HomeComponent },
     { path: 'user-profile',     component: ProfileComponent },
     { path: 'landing',          component: LandingComponent },
     { path: 'login',          component: LoginComponent },
@@ -24,7 +24,6 @@ const routes: Routes =[
     {path: 'statusInscription/unsuccessful', component: CustomerUnsuccessComponent},
     {path: 'statusContact/successful', component: ContactSuccessComponent},
     {path: 'statusContact/unsuccessful', component: ContactUnsuccessComponent},
-    { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 
 @NgModule({

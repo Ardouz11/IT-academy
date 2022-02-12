@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
-const baseUrlTrainings = 'http://itsren-academy.com/api/trainings';
-const baseUrlCustomer='http://itsren-academy.com/api/customer';
-const baseUrlPerson='http://itsren-academy.com/api/person';
-const baseUrlContactUS='http://itsren-academy.com/api/contactus';
-const baseUrlListOfCustomers='http://itsren-academy.com/api/listOfCustomers';
+const baseUrlTrainings = 'https://itsren-academy.com/api/trainings';
+const baseUrlCustomer='https://itsren-academy.com/api/customer';
+const baseUrlPerson='https://itsren-academy.com/api/person';
+const baseUrlContactUS='https://itsren-academy.com/api/contactus';
+const baseUrlListOfCustomers='https://itsren-academy.com/api/listOfCustomers';
 const headers = { 'content-type': 'application/json'} 
 @Injectable()
 export class RestService {

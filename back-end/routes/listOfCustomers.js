@@ -12,6 +12,7 @@ var con = mysql.createConnection({
 
 router.get('/:id',async function (req, res, next) {
   try {     
+    if(req.headers.authorization=='rachuser@1998'){
             let listOfCustomers
             let sql = `SELECT * FROM person where id_training=?;`
             con.query(sql,[req.params.id],(err, result, fields) =>{
@@ -29,6 +30,7 @@ router.get('/:id',async function (req, res, next) {
 })
 
 }
+  }
 catch (error) {
   console.log("error")
 return res.send({ status: 0, data: "connection error"});

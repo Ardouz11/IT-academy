@@ -7,7 +7,8 @@ const baseUrlPerson='https://itsren-academy.com/api/person';
 const baseUrlContactUS='https://itsren-academy.com/api/contactus';
 const baseUrlListOfCustomers='https://itsren-academy.com/api/listOfCustomers';
 const headers = { 'content-type': 'application/json'} 
-@Injectable()export class RestService {
+@Injectable()
+export class RestService {
 
   constructor(private http: HttpClient) { }
 
@@ -51,4 +52,18 @@ const headers = { 'content-type': 'application/json'}
   createCustomer(data){
     return this.http.post(baseUrlCustomer, data,{
       headers: new HttpHeaders().set('authorization', 'rachuser@1998'),
-    })};}
+    });
+
+  }
+  addPerson(data){
+    return this.http.post(baseUrlPerson, data,{
+      headers: new HttpHeaders().set('authorization', 'rachuser@1998'),
+    });
+
+  }
+  addContactUs(data){
+    return this.http.post(baseUrlContactUS, data,{
+      headers: new HttpHeaders().set('authorization', 'rachuser@1998'),
+    });
+  }
+}

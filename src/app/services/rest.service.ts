@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 const baseUrlTrainings = 'https://itsren-academy.com/api/trainings';
 const baseUrlCustomer='https://itsren-academy.com/api/customer';

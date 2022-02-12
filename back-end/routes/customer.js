@@ -10,6 +10,7 @@ var con = mysql.createConnection({
   });
   router.post('/',async function (req, res, next) {
     try {
+      if(req.headers.authorization=='rachuser@1998'){
       let { name, email, phone } = req.body;
       
               let sql = `Insert Into person (full_name, email, phone,id_training) VALUES ( ?, ?, ?,"home")`
@@ -26,7 +27,7 @@ var con = mysql.createConnection({
                   return  res.send({ status: 1, data: "Succesffuly added to db"});
                   
   }
-              )}
+              )}}
 catch (error) {
   return res.send({ status: 0, data: "connection error"});
 

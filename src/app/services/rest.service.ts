@@ -51,4 +51,4 @@ const headers = { 'content-type': 'application/json'}
   createCustomer(data){
     return this.http.post(baseUrlCustomer, data,{
       headers: new HttpHeaders().set('authorization', 'rachuser@1998'),
-    });
+    })};}

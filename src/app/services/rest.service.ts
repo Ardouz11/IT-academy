@@ -7,23 +7,30 @@ const baseUrlPerson='https://itsren-academy.com/api/person';
 const baseUrlContactUS='https://itsren-academy.com/api/contactus';
 const baseUrlListOfCustomers='https://itsren-academy.com/api/listOfCustomers';
 const headers = { 'content-type': 'application/json'} 
-@Injectable()
-export class RestService {
+@Injectable()export class RestService {
 
   constructor(private http: HttpClient) { }
 
   getAll() {
-    return this.http.get(baseUrlTrainings);
+    return this.http.get(baseUrlTrainings,{
+      headers: new HttpHeaders().set('authorization', 'rachuser@1998'),
+    });
   }
 
   get(id) {
-    return this.http.get(`${baseUrlTrainings}/${id}`);
+    return this.http.get(`${baseUrlTrainings}/${id}`,{
+      headers: new HttpHeaders().set('authorization', 'rachuser@1998'),
+    });
   }
   getListOfCustomers(id) {
-    return this.http.get(`${baseUrlListOfCustomers}/${id}`);
+    return this.http.get(`${baseUrlListOfCustomers}/${id}`,{
+      headers: new HttpHeaders().set('authorization', 'rachuser@1998'),
+    });
   }
   create(data) {
-    return this.http.post(baseUrlTrainings, data).pipe(map(res => {return res;}));
+    return this.http.post(baseUrlTrainings, data,{
+      headers: new HttpHeaders().set('authorization', 'rachuser@1998'),
+    }).pipe(map(res => {return res;}));
   }
 
   update(id, data) {
@@ -42,14 +49,6 @@ export class RestService {
     return this.http.get(`${baseUrlTrainings}?title=${title}`);
   }
   createCustomer(data){
-    return this.http.post(baseUrlCustomer, data);
-
-  }
-  addPerson(data){
-    return this.http.post(baseUrlPerson, data);
-
-  }
-  addContactUs(data){
-    return this.http.post(baseUrlContactUS, data);
-  }
-}
+    return this.http.post(baseUrlCustomer, data,{
+      headers: new HttpHeaders().set('authorization', 'rachuser@1998'),
+    });

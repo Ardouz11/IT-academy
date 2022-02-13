@@ -1,0 +1,377 @@
+<main>
+    <div  *ngFor="let training of training_details">
+      <div class="position-relative">
+        <!-- Hero for FREE version -->
+        <section class="section section-lg section-hero section-shaped">
+          <!-- Background circles -->
+          <div class="shape shape-style-1 shape-primary">
+            <span class="span-150"></span>
+            <span class="span-50"></span>
+            <span class="span-50"></span>
+            <span class="span-75"></span>
+            <span class="span-100"></span>
+            <span class="span-75"></span>
+            <span class="span-50"></span>
+            <span class="span-100"></span>
+            <span class="span-50"></span>
+            <span class="span-100"></span>
+            <span class="span-50"></span>
+            <span class="span-100"></span>
+          </div>
+          <!-- Inscription part -->
+          <div class="container py-md" id="inscription">
+            <div class="row row-grid justify-content-between align-items-center">
+              
+              <div class="col-lg-7">
+                <h3 class="display-2 text-white" style="font-size: 36px;line-height: normal;">
+                    Inscrivez-vous dans la Formation Gratuite
+                  <p class="lead text-white"> <b style="font-size: 44px;color: #FFD700;"> Nombres limités </b></p>
+                </h3>
+  
+                <h3 class="display-3 text-light" style="font-size: 36px;line-height: normal;">
+                  La formation commence dans moins de 
+                </h3>
+                <div style="background-color: #0271bb;opacity: 0.5;
+                  border-radius: 5px;
+                  font :italic;
+                  padding: 20px;
+                  box-shadow: 0px 0px 18px #FFD700;">
+                  <app-countdown [start]="training.date_start"
+                  style="color: #0e1f2b;">
+                  </app-countdown>
+                </div>
+              </div>
+              <div class="col-lg-5 mb-lg-auto">
+                <div class="transform-perspective-right">
+                  <div class="card bg-secondary shadow border-0">
+                    <div class="card-header bg-gradient-primary">
+                      <div class="text-muted text-center">
+                        <h3 class=" text-white" style="font-size: 22px; margin-bottom: 0px;">
+                          Inscrivez vous dans la formation gratuite <b style="font-size: 24px;color: #FFD700;"> SAP </b>
+                        </h3>
+                      </div>
+                    </div>
+                    <div class="card-body px-lg-5 py-lg-5">
+                      <form #subscribeForm="ngForm" (ngSubmit)="subscribeClient(subscribeForm.value)">
+                        <!-- Name -->
+                        <div><em *ngIf="subscribeForm.controls.name?.invalid && (subscribeForm.controls.name?.touched)">Required</em></div>
+                        <div class="form-group mb-3" [ngClass]="{'focused':focus===true}">
+                          <div class="input-group input-group-alternative">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text"><i class="ni ni-circle-08"></i></span>
+                            </div>
+                           
+                            <input [(ngModel)]="name" class="form-control" required minlength="4" placeholder="Name" type="name" name="name" (focus)="focus=true" (blur)="focus=false">
+                          </div>
+                        </div>
+                        <div> <em *ngIf="subscribeForm.controls.email?.invalid && (subscribeForm.controls.email?.touched)">Required</em></div>
+                        <div class="form-group mb-3" [ngClass]="{'focused':focus===true}">
+                          <div class="input-group input-group-alternative">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                            </div>
+                            
+                            <input [(ngModel)]="email" class="form-control" placeholder="Email" required  ngModel email type="email" name="email" (focus)="focus=true" (blur)="focus=false">
+                          </div>
+                        </div>
+                        <div><em *ngIf="subscribeForm.controls.phone?.invalid && (subscribeForm.controls.phone?.touched)">Required</em></div>
+                        <div class="form-group" [ngClass]="{'focused':focus1===true}">
+                          <div class="input-group input-group-alternative">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text"><i class="ni ni-mobile-button"></i></span>
+                            </div>
+                            <input [(ngModel)]="phone" class="form-control" required minlength="10" maxlength="12" pattern="[0-9]*" placeholder="Phone" type="phone" name="phone" (focus)="focus1=true" (blur)="focus1=false">
+                          </div>
+                        </div>
+                        <div class="custom-control custom-control-alternative custom-checkbox">
+                          <input class="custom-control-input" id=" customCheckLogin2" type="checkbox">
+                          <label class="custom-control-label" for=" customCheckLogin2">
+                            <span>J'accepte les conditions d'inscription</span>
+                          </label>
+                        </div>
+                        <div class="custom-control custom-control-alternative">
+                          <label>
+                            <u (click)="open(classic2, 'Notification', '')">Conditions</u>
+                           <ng-template #classic2 let-c="close" let-d="dismiss">
+                             <div class="modal-content bg-gradient-primary">
+                               <div class="modal-header">
+                                 <h2 class="modal-title" id="modal-title-notification" style="margin-bottom: 0px;">Conditions d'utilisation</h2>
+                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="d('Cross click')">
+                                   <span aria-hidden="true">×</span>
+                                 </button>
+                               </div>
+                               <div class="modal-body">
+                                 <div class="py-3 text-center">
+                                   <i class="ni ni-bell-55 ni-3x"></i>
+                                   <h4 class="heading mt-4">Condition IT-Solution R.EN Academy</h4>
+                                   <p>Vous accepter de reçevoir des emails de l'apart de notre centre pour vous notifier des nouvelles formations</p>
+                                 </div>
+                               </div>
+                               <div class="modal-footer">
+                                 <button type="button" class="btn btn-white text-primary" data-dismiss="modal" (click)="c('Close click')" >J'accepte</button>
+                                 <button type="button" class="btn btn-link text-white ml-auto" data-dismiss="modal" (click)="c('Close click')">Feremr</button>
+                               </div>
+                             </div>
+                           </ng-template>
+                          </label>
+                        </div>
+                      
+                        <div class="text-center">
+                          <button type="submit" class="btn btn-primary my-2">S'inscrire</button>
+                    
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- SVG separator -->
+          <div class="separator separator-bottom separator-skew zindex-100">
+            <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+            </svg>
+          </div>
+        </section>
+      </div>
+      
+      <section section-lg section-hero section-shaped >
+        <div class="container py-md">
+          <div class="row row-grid justify-content-between">
+            <div class="col-lg-6">
+              <h1 class="display-3" style="font-size : 32px; color:#0271bb;word-spacing: 4px;">{{training.title}}</h1>
+              <div class="col-lg-12" style="height: 2px;background-color: #0271bb;
+              margin-bottom: 20px;"></div>
+              <p>
+                {{training.description}}
+              </p>
+            </div>
+            <div class="col-lg-6">
+              <div class="row" style="margin : 4px;">
+                <div class="col align-items-center">
+                  <h2 style="font-size: 28px; margin-top: 12px;"> {{training.price}}.00 Dh </h2> 
+                </div>
+                <div class="col" style="text-align :right;">
+                  <button type="submit" class="btn btn-primary my-2" onClick="document.getElementById('inscription').scrollIntoView();">S'inscrire</button>
+                </div>
+              </div>
+
+              <div class="row" style="
+                margin: 10px;
+                margin-top: 30px;
+                box-shadow: 0px 0px 16px #0271bb;
+                border-radius: 4px;
+                padding: 2px;
+                padding-bottom: 0px;">
+                <div class="col align-items-center" style="text-align: left;">
+                  <h3 style="font-size: 18px; margin-bottom: 0px;"> Date de debut : </h3> 
+                </div>
+                <div class="col" style="text-align :right;">
+                  <h2 style="font-size: 18px;margin-bottom: 0px;"> {{training.date_start | date:'dd-MM-yyyy'}} </h2> 
+                </div>
+              </div>
+  
+              <div class="row" style="
+              margin: 10px;
+              box-shadow: 0px 0px 16px #0271bb;
+              border-radius: 4px;
+              padding: 2px;
+              padding-bottom: 0px;">
+              <div class="col align-items-center" style="text-align: left;">
+                <h3 style="font-size: 18px; margin-bottom: 0px;"> Date de Fin : </h3> 
+              </div>
+              <div class="col" style="text-align :right;">
+                <h2 style="font-size: 18px;margin-bottom: 0px;"> {{training.date_end | date:'dd-MM-yyyy'}} </h2> 
+              </div>
+            </div>
+  
+              <div class="row" style="
+              margin: 10px;
+              box-shadow: 0px 0px 16px #0271bb;
+              border-radius: 4px;
+              padding: 4px;
+              padding-bottom: 4px;">
+                <div class="col align-items-right" style="text-align: center;">
+                  <h3 style="font-size: 18px;  margin-bottom: 0px;"> Temps : <b> {{training.descriptionTime}} </b></h3> 
+                </div>
+              </div>
+  
+              <div class="row" style="
+              margin: 10px;
+              margin-top: 30px;
+              background:#0271bb ;
+              box-shadow: 0px 0px 16px #9ea1a3;
+              border-radius: 4px;
+              padding: 8px;
+              padding-bottom: 4px;">
+  
+                <div class="col align-items-right" style="text-align: left;">
+                  <h3 style="font-size: 18px; color: #fff; margin: 0px;"> Mode : <b> {{training.training_mode}}</b> </h3> 
+                </div>
+                <div class="col" style="text-align :right;">
+                  <h3 style="font-size: 18px; margin: 0px;"> Place :  <b> {{training.place}} </b></h3> 
+                </div>
+              </div>
+  
+            </div>
+          </div>
+        </div>
+  
+  
+      <div class="position-relative">
+        <!-- Hero for FREE version -->
+        <section class="section section-lg section-hero section-shaped">
+          <!-- Background circles -->
+          <div class="shape shape-style-0 shape-primary">
+            <span class="span-150"></span>
+            <span class="span-50"></span>
+            <span class="span-50"></span>
+            <span class="span-75"></span>
+            <span class="span-100"></span>
+            <span class="span-75"></span>
+            <span class="span-50"></span>
+            <span class="span-100"></span>
+            <span class="span-50"></span>
+            <span class="span-100"></span>
+            <span class="span-50"></span>
+            <span class="span-100"></span>
+          </div>
+          <!-- Certificate part -->
+          <div class="container py-md">
+            <div class="row row-grid justify-content-between align-items-center">
+  
+              <div class="col-lg-5 mb-lg-auto">
+                <div class="transform-perspective-right">
+                  <div class="card bg-secondary shadow border-0 bg-gradient-primary">
+  
+                    <div class="card-body">
+                      <img style="width: 110%;" src={{training.pathCertificate}}>
+                    </div>
+  
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <h1 class="display-2 text-white" style="font-size: 34px;line-height: 150%;">
+                  Une <i style="font-size: 32px;color: #FFD700;"> Certifcat </i>
+                  confirmée par les experts, sous votre nom et la durée de la formation
+                </h1>
+              </div>
+            </div>
+          </div>
+  
+        </section>
+      </div>
+  
+     <!-- <section section-lg section-hero section-shaped > -->
+        <div class="container py-md">
+          <div class="row row-grid justify-content-between">
+            <div class="col-lg-12">
+              <h1 class="display-3" style="font-size : 32px; color:#0271bb;word-spacing: 4px;">
+                Contenue de la formation
+              </h1>
+              <div class="col-lg-12" style="height: 2px;
+                background-color: #0271bb;
+                margin-bottom: 20px;">
+              </div>
+                <h2 *ngFor="let title of training_title1" 
+                style="color: rgb(0, 0, 0);
+                  background-color: #0271bb3f;
+                  border-radius: 4px;
+                  padding: 4px;
+                  padding-left: 16px;
+                  box-shadow: 2px 2px 3px #b3cef7;">
+                  {{title.content_title1}}
+                </h2>
+            </div>
+          </div>
+        </div>
+  
+     <!-- section to describe the Academy  -->
+      <div class="container py-md">
+        <div class="row row-grid justify-content-between">
+          <div class="col-lg-12">
+            <h1 class="display-3" style="font-size : 32px; color:#0271bb;word-spacing: 4px;">
+              IT-Solution Academy
+            </h1>
+            <div class="col-lg-12" style="height: 2px;
+              background-color: #0271bb;
+              margin-bottom: 20px;">
+            </div>
+              <h3 style="font-size: 18px;">
+                <a style="color: #0271bb;" > IT-Solution REN </a> <b style="color: #0271bb;" > Academy </b>
+                 est un centre de formation et certification professionnelle dédiées aux
+                 métiers de SAP, avec un expertise de plus de 15 ans on vous offre des formations d’excellence
+                  qualifiantes et certifiantes pour les différents Module de SAP S/4 HANA.
+              </h3>
+              <!-- Sub Part in Description -->
+              <h3 style="font-size: 18px;color:rgb(235, 199, 0);word-spacing: 4px;margin-left: 16px;margin-bottom: 5px;">
+                <i> Les vrais experts ERP sont de plus en plus rares ! </i>
+                <div class="col-lg-2" style="height: 1px;
+                background-color: gold;">
+              </div>
+              </h3>
+              <h3 style="font-size: 16px;margin-left: 16px;">
+                <b>Q</b>ue vous soyez étudiant, professionnel ou en recherche active d’emploi vous êtes au bon endroit.
+                Booster votre carrière Professionnelle pour devenir un<b style="color: #0271bb;"> 
+                  Consultant SAP S/4 HANA Certifié </b>et reconnu SAP.                
+              </h3>
+  
+              <h3 style="font-size: 18px;color:rgb(235, 199, 0);word-spacing: 4px;margin-left: 16px;margin-bottom: 5px;">
+                <i> Notre engagement ! </i>
+                <div class="col-lg-1" style="height: 1px;
+                background-color: gold;">
+              </div>
+              </h3>
+              <h3 style="font-size: 16px;margin-left: 16px;margin-bottom: 5px;">
+                <b>N</b>otre principale mission est d’assurer l’adéquation entre
+                les qualifications et les exigences de l’emploi dans l’écosystème de SAP.  
+              </h3>
+              <h3 style="font-size: 16px;margin-left: 16px;margin-bottom: 5px;">
+                <b>G</b>race à notre équipe d’expert certifiés et reconnus par SAP on vous offre un
+                large choix de formations dans les différents modules de SAP S/4 HANA.     
+              </h3>
+              <h3 style="font-size: 16px;margin-left: 16px;margin-bottom: 5px;">
+                <b>N</b>ous offrons la meilleure expérience d'apprentissage à nos futurs consultants afin de les
+                 accompagner dans leurs objectifs professionnels, dans le cadre d’un apprentissage personnalisé 
+                 et adaptés aux exigence du Marche.     
+              </h3>
+              <h3 style="font-size: 16px;margin-left: 16px;margin-bottom: 5px;">
+                <b>P</b>rofiter d’un accompagnement et d’une préparation de qualité pour passer en toute aisance vos Examens
+                 de certifications et pour décrocher votre statut de Consultant SAP S/4 HANA.   
+              </h3>
+  
+              <h3 style="font-size: 18px;color:rgb(235, 199, 0);word-spacing: 4px;margin-left: 16px;margin-bottom: 5px;">
+                <i> Académie d’entreprise ! </i>
+                <div class="col-lg-2" style="height: 1px;
+                background-color: gold;">
+              </div>
+              
+              </h3>
+              <h3 style="font-size: 16px;margin-left: 16px;">
+                <b>F</b>aites de la formation un véritable facteur de succès de votre entreprise.             
+              </h3>
+              <!-- End Sub Part -->
+              <div class="row row-grid justify-content-between align-items-center">
+              <div class="col-lg-9">
+                <h3 style="font-size: 18px;margin-top: 4px;">
+                  <a style="color: #0271bb;" > Profitez </a> d’un large choix de formation dans les différents Modules de SAP S/4HANA
+                </h3>
+              </div>
+  
+              <div class="col-lg-3">
+                <div class="text-right">
+                  <button type="button" class="btn btn-primary my-2" onClick="document.getElementById('inscription').scrollIntoView();">S'inscrire</button>
+                </div>
+              </div>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+      <!--  </section> -->
+    </section>
+    </div>
+  

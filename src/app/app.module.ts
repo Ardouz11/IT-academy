@@ -19,7 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeModule } from './home/home.module';
 import { ContactSuccessComponent } from './contact-success/contact-success.component';
 import { ContactUnsuccessComponent } from './contact-unsuccess/contact-unsuccess.component';
-
+import { FreeTrainingComponent } from './free-training/free-training.component';
+import { FreeTrainingContentComponent } from './free-training-content/free-training-content.component';
 
 
 
@@ -37,6 +38,10 @@ import { ContactUnsuccessComponent } from './contact-unsuccess/contact-unsuccess
     ContactSuccessComponent,
 
     ContactUnsuccessComponent,
+
+    FreeTrainingComponent,
+
+    FreeTrainingContentComponent,
   
   ],
   imports: [

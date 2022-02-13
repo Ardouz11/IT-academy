@@ -1,0 +1,11 @@
+.element-fix {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    margin: auto;
+    vertical-align: auto;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);    
+  }

@@ -13,6 +13,7 @@ import { CustomerStatusComponent } from './customer-status/customer-status.compo
 import { CustomerUnsuccessComponent } from './customer-unsuccess/customer-unsuccess.component';
 import { ContactSuccessComponent } from './contact-success/contact-success.component';
 import { ContactUnsuccessComponent } from './contact-unsuccess/contact-unsuccess.component';
+import { FreeTrainingContentComponent } from './free-training-content/free-training-content.component';
 
 const routes: Routes =[
     { path: 'home',             component: HomeComponent },
@@ -24,7 +25,8 @@ const routes: Routes =[
     {path: 'statusInscription/unsuccessful', component: CustomerUnsuccessComponent},
     {path: 'statusContact/successful', component: ContactSuccessComponent},
     {path: 'statusContact/unsuccessful', component: ContactUnsuccessComponent},
-    { path: '', redirectTo: 'home', pathMatch: 'full' }
+    { path: '', redirectTo: 'home', pathMatch: 'full' },
+    { path: 'FreeTrainingContentComponent', component: FreeTrainingContentComponent }
 ];
 
 @NgModule({

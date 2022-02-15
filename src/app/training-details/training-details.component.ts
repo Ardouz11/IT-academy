@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { RestService } from '../services/rest.service';
 import { Router } from '@angular/router';
+import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-training-details',
@@ -14,8 +15,10 @@ export class TrainingDetailsComponent implements OnInit {
   training_details;
   training_title1;
   training_title2;
+  closeResult: string;
 
-  constructor(private restService:RestService,private activatedRoute:ActivatedRoute,private router:Router ) { 
+
+  constructor(private modalService: NgbModal,private restService:RestService,private activatedRoute:ActivatedRoute,private router:Router ) { 
     this.training_id=this.activatedRoute.snapshot.params['id']
     console.log("the id passed is : ",this.activatedRoute.snapshot.params['id'])
   }
@@ -66,5 +69,38 @@ export class TrainingDetailsComponent implements OnInit {
     this.getTrainingDetails()
   
   }
+
+
+  open(content, type, modalDimension) {
+    if (modalDimension === 'sm' && type === 'modal_mini') {
+        this.modalService.open(content, { windowClass: 'modal-mini', size: 'sm', centered: true }).result.then((result) => {
+            this.closeResult = `Closed with: ${result}`;
+        }, (reason) => {
+            this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+        });
+    } else if (modalDimension === '' && type === 'Notification') {
+      this.modalService.open(content, { windowClass: 'modal-danger', centered: true }).result.then((result) => {
+          this.closeResult = `Closed with: ${result}`;
+      }, (reason) => {
+          this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+      });
+    } else {
+        this.modalService.open(content,{ centered: true }).result.then((result) => {
+            this.closeResult = `Closed with: ${result}`;
+        }, (reason) => {
+            this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+        });
+    }
+}
+
+private getDismissReason(reason: any): string {
+  if (reason === ModalDismissReasons.ESC) {
+      return 'by pressing ESC';
+  } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+      return 'by clicking on a backdrop';
+  } else {
+      return  `with: ${reason}`;
+  }
+}
 
 }

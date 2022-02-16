@@ -33,6 +33,7 @@ export class HomeComponent implements OnInit {
     }
     subscribeClient(subscribeForm){
      //POST To add customer   
+     subscribeForm["id_training"]="home"
      console.log(subscribeForm);
      this.restService.createCustomer(subscribeForm).subscribe((data:any)=>{
         this.status=data.status

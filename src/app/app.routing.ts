@@ -16,7 +16,7 @@ import { ContactUnsuccessComponent } from './contact-unsuccess/contact-unsuccess
 import { FreeTrainingContentComponent } from './free-training-content/free-training-content.component';
 
 const routes: Routes =[
-    { path: 'home',             component: HomeComponent },
+    { path: '',             component: HomeComponent },
     { path: 'user-profile',     component: ProfileComponent },
     { path: 'landing',          component: LandingComponent },
     { path: 'login',          component: LoginComponent },
@@ -25,15 +25,18 @@ const routes: Routes =[
     {path: 'statusInscription/unsuccessful', component: CustomerUnsuccessComponent},
     {path: 'statusContact/successful', component: ContactSuccessComponent},
     {path: 'statusContact/unsuccessful', component: ContactUnsuccessComponent},
+<<<<<<< HEAD
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'FreeTrainingContentComponent', component: FreeTrainingContentComponent }
+=======
+>>>>>>> feature_deployement
 ];
 
 @NgModule({
   imports: [
     CommonModule,
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes,{ useHash: true })
   ],
   exports: [
   ],

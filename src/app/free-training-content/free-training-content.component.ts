@@ -13,7 +13,13 @@ export class FreeTrainingContentComponent implements OnInit {
   constructor(private modalService: NgbModal,private restService:RestService,private router:Router ){
 
 }
+name;
+email;
+phone;
 status;
+response;
+focus;
+focus1;
   ngOnInit(): void {
   }
 

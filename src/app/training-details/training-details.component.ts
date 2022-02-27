@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { RestService } from '../services/rest.service';
 import { Router } from '@angular/router';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { NavbarService } from '../services/navbar.service';
 
 @Component({
   selector: 'app-training-details',
@@ -18,7 +19,8 @@ export class TrainingDetailsComponent implements OnInit {
   closeResult: string;
 
 
-  constructor(private modalService: NgbModal,private restService:RestService,private activatedRoute:ActivatedRoute,private router:Router ) { 
+  constructor(private modalService: NgbModal,private restService:RestService,private activatedRoute:ActivatedRoute,private router:Router,private nav: NavbarService) { 
+    
     this.training_id=this.activatedRoute.snapshot.params['id']
     console.log("the id passed is : ",this.activatedRoute.snapshot.params['id'])
   }
@@ -66,6 +68,7 @@ export class TrainingDetailsComponent implements OnInit {
   }
   
   ngOnInit(): void {
+    this.nav.hide();
     this.getTrainingDetails()
   
   }

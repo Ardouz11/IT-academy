@@ -14,7 +14,10 @@ export class NavbarComponent implements OnInit {
 
     constructor(public location: Location, private router: Router) {
     }
-
+    navigateToDetails(id){
+        this.router.navigate(["trainingDetails",id])
+       // console.log("the id of this training is ",id)
+      }
     ngOnInit() {
       this.router.events.subscribe((event) => {
         this.isCollapsed = true;

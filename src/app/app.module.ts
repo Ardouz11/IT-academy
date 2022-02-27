@@ -39,7 +39,6 @@ import { FreeTrainingContentComponent } from './free-training-content/free-train
 
     ContactUnsuccessComponent,
 
-    FreeTrainingComponent,
 
     FreeTrainingContentComponent,
   

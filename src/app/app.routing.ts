@@ -25,11 +25,7 @@ const routes: Routes =[
     {path: 'statusInscription/unsuccessful', component: CustomerUnsuccessComponent},
     {path: 'statusContact/successful', component: ContactSuccessComponent},
     {path: 'statusContact/unsuccessful', component: ContactUnsuccessComponent},
-<<<<<<< HEAD
-    { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'FreeTrainingContentComponent', component: FreeTrainingContentComponent }
-=======
->>>>>>> feature_deployement
 ];
 
 @NgModule({
